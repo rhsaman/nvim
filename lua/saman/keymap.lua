@@ -18,13 +18,20 @@ keymap.set("n", "<leader>-", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>=", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>x", ":close<CR>") -- close current split window
 
+------------------------resize window-----------------------
+keymap.set("n", "<C-s>h", "<C-w>5<")
+keymap.set("n", "<C-s>l", "<C-w>5>")
+keymap.set("n", "<C-s>k", "<C-w>5-")
+keymap.set("n", "<C-s>j", "<C-w>5+")
+keymap.set("n", "<C-s>=", "<C-w>=")
+-- vim-maximizer
+keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
+
+-----------------------tabs-----------------------
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
 keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
 keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
-
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
