@@ -57,3 +57,5 @@ keymap.set(
 	"<cmd>Telescope git_status<cr>",
 	{ desc = "list current changes per file with diff preview" }
 )
+-------------------------------git fugitive----------------------------
+keymap.set("n", "<leader>gi", "<cmd>:Git<cr>", { desc = "fugitive" })
