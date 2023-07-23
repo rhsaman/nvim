@@ -67,3 +67,24 @@ keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to 
 keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side
+
+----------------------------truble------------------------------
+keymap.set("n", "<leader>bx", function()
+	require("trouble").open()
+end, { desc = "open trouble" })
+
+keymap.set("n", "<leader>bw", function()
+	require("trouble").open("workspace_diagnostics")
+end, { desc = "workspace_diagnostics" })
+
+keymap.set("n", "<leader>bd", function()
+	require("trouble").open("document_diagnostics")
+end, { desc = "document_diagnostics" })
+
+keymap.set("n", "<leader>bl", function()
+	require("trouble").open("quickfix")
+end, { desc = "quickfix" })
+
+keymap.set("n", "<leader>bq", function()
+	require("trouble").open("loclist")
+end, { desc = "loclist" })

@@ -10,6 +10,8 @@ if not actions_setup then
 	return
 end
 
+local trouble = require("trouble.providers.telescope")
+
 -- configure telescope
 telescope.setup({
 	pickers = {
