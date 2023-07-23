@@ -6,9 +6,6 @@ keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { desc = "explorer" })
 -- use jk to exit insert mode
 keymap.set("i", "<leader>j", "<ESC>")
 
--- clear search highlights
-keymap.set("n", "<leader>nh", ":nohl<CR>")
-
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
@@ -59,3 +56,13 @@ keymap.set(
 )
 -------------------------------git fugitive----------------------------
 keymap.set("n", "<leader>gi", "<cmd>:Git<cr>", { desc = "fugitive" })
+
+----------------------------------------------lspsaga---------------------------------------------
+local opts = { noremap = true, silent = true }
+keymap.set("n", "<leader>r", "<cmd>Lspsaga rename<CR>", { desc = "rename word" }, opts) -- smart rename
+keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) -- show  diagnostics for line
+keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for cursor
+keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- jump to previous diagnostic in buffer
+keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
+keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
+keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts) -- see outline on right hand side

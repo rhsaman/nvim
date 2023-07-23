@@ -104,6 +104,7 @@ return require("packer").startup(function(use)
 	})
 	------------------------git-----------------------
 	use("tpope/vim-fugitive")
-	----------------------airline-------------------------
-	use("vim-airline/vim-airline")
+
+	------------------------toto tag-----------------------
+	use("windwp/nvim-ts-autotag")
 end)
