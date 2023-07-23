@@ -27,11 +27,12 @@ keymap.set("n", "<leader>tn", ":tabn<CR>", { desc = "next tab" })
 keymap.set("n", "<leader>tp", ":tabp<CR>", { desc = "previous tab" })
 
 -- telescope
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "file" })
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files <cr>", { desc = "file" })
+keymap.set("n", "<leader>fh", "<cmd>Telescope find_files hidden=true<cr>", { desc = "hidden file" })
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "string" })
 keymap.set("n", "<leader>fS", "<cmd>Telescope grep_string<cr>", { desc = "grep" })
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "buffers" })
-keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "recent" })
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles hidden=true <cr>", { desc = "recent" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
 
 -- telescope git commands (not on youtube nvim video)
