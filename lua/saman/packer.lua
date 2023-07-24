@@ -108,5 +108,6 @@ return require("packer").startup(function(use)
 	-----------------------bqf----------------------------------
 	use({ "kevinhwang91/nvim-bqf" })
 
+	-----------------------truble-----------------------
 	use("folke/trouble.nvim")
 end)
