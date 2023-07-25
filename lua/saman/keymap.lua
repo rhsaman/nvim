@@ -12,10 +12,10 @@ keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
 keymap.set("n", "<leader>x", ":close<CR>", { desc = "close pane" })
 
 ------------------------resize window-----------------------
-keymap.set("n", "<leader>sh", "<C-w>5<", { desc = "resize left" })
-keymap.set("n", "<leader>sl", "<C-w>5>", { desc = "resize rught" })
-keymap.set("n", "<leader>sk", "<C-w>5-", { desc = "resize up" })
-keymap.set("n", "<leader>sj", "<C-w>5+", { desc = "resize down" })
+keymap.set("n", "<leader>sh", "<C-w>10<", { desc = "resize left" })
+keymap.set("n", "<leader>sl", "<C-w>10>", { desc = "resize rught" })
+keymap.set("n", "<leader>sk", "<C-w>10-", { desc = "resize up" })
+keymap.set("n", "<leader>sj", "<C-w>10+", { desc = "resize down" })
 keymap.set("n", "<leader>s=", "<C-w>=", { desc = "resize equal" })
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "maximization" })
