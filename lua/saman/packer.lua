@@ -105,9 +105,9 @@ return require("packer").startup(function(use)
 	------------------------git-----------------------
 	use("tpope/vim-fugitive")
 
-	-----------------------bqf----------------------------------
-	use({ "kevinhwang91/nvim-bqf" })
-
 	-----------------------truble-----------------------
 	use("folke/trouble.nvim")
+
+	-----------------------------rust formater----------------------------
+	use("rust-lang/rust.vim")
 end)
