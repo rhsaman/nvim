@@ -23,8 +23,8 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "maximization" })
 -----------------------tabs-----------------------
 keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "open tab" })
 keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "close tab" })
-keymap.set("n", "<leader>tn", ":tabn<CR>", { desc = "next tab" })
-keymap.set("n", "<leader>tp", ":tabp<CR>", { desc = "previous tab" })
+keymap.set("n", "<leader>tk", ":tabn<CR>", { desc = "next tab" })
+keymap.set("n", "<leader>tj", ":tabp<CR>", { desc = "previous tab" })
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files theme=dropdown<cr>", { desc = "file" })
