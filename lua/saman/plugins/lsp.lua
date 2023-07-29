@@ -16,10 +16,15 @@ if not typescript_setup then
 	return
 end
 
+local util = require("lspconfig/util")
+
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
+	require("lsp-inlayhints").on_attach(client, bufnr)
+	vim.cmd("hi LspInlayHint guibg=#000")
+
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -98,6 +103,21 @@ lspconfig["lua_ls"].setup({
 				},
 			},
 		},
+	},
+})
+
+lspconfig.gopls.setup({
+	cmd = { "gopls", "serve" },
+	filetypes = { "go", "gomod" },
+	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+			staticcheck = true,
+		},
+		lsp_inlay_hints = { enable = true },
 	},
 })
 

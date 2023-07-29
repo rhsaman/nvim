@@ -110,4 +110,5 @@ return require("packer").startup(function(use)
 
 	-----------------------------rust formater----------------------------
 	use("rust-lang/rust.vim")
+	use("lvimuser/lsp-inlayhints.nvim")
 end)
