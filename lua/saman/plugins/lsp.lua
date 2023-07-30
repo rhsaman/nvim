@@ -114,11 +114,11 @@ lspconfig.gopls.setup({
 	settings = {
 		gopls = {
 			analyses = {
-				unusedparams = true,
+				unusedparams = false,
 			},
-			staticcheck = true,
+			staticcheck = false,
 		},
-		lsp_inlay_hints = { enable = true },
+		lsp_inlay_hints = { enable = false },
 	},
 })
 
