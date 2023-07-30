@@ -22,6 +22,7 @@ local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
 local on_attach = function(client, bufnr)
+	--lsp-inlayhints for show types
 	require("lsp-inlayhints").on_attach(client, bufnr)
 	vim.cmd("hi LspInlayHint guibg=#000")
 
