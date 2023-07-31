@@ -113,5 +113,4 @@ return require("packer").startup(function(use)
 
 	--inlay for rust
 	use("lvimuser/lsp-inlayhints.nvim")
-	-- go formatting
 end)
