@@ -24,7 +24,7 @@ local keymap = vim.keymap -- for conciseness
 local on_attach = function(client, bufnr)
 	--lsp-inlayhints for show types
 	require("lsp-inlayhints").on_attach(client, bufnr)
-	vim.cmd("hi LspInlayHint guifg=#1AA7EC guibg=#000")
+	vim.cmd("hi LspInlayHint guibg=#000")
 
 	-- keybind options
 	local opts = { noremap = true, silent = true, buffer = bufnr }
