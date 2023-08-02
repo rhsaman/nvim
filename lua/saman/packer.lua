@@ -105,12 +105,20 @@ return require("packer").startup(function(use)
 	------------------------git-----------------------
 	use("tpope/vim-fugitive")
 
-	-----------------------truble-----------------------
-	use("folke/trouble.nvim")
-
 	-----------------------------rust formater----------------------------
 	use("rust-lang/rust.vim")
 
 	--inlay for rust
 	use("lvimuser/lsp-inlayhints.nvim")
+
+	--auto session
+	use({
+		"rmagatti/auto-session",
+		config = function()
+			require("auto-session").setup({
+				log_level = "error",
+				auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+			})
+		end,
+	})
 end)

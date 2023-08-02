@@ -10,4 +10,4 @@ require("tokyonight").setup({
 	dim_inactive = false,
 })
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme tokyonight-night")
