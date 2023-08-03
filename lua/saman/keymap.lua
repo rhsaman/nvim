@@ -6,6 +6,9 @@ keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { desc = "explorer" })
 -- use jk to exit insert mode
 keymap.set("i", "<leader>j", "<ESC>")
 
+-----------------test---------------------
+keymap.set("n", "<leader>c", "<cmd>!sh %<cr>", { desc = "curl" })
+
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })

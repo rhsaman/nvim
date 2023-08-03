@@ -1,13 +1,8 @@
--- require("rose-pine").setup({
--- 	disable_background = true,
--- 	dim_nc_background = true,
+-- require("tokyonight").setup({
+-- 	-- transparent = true,
+-- 	dim_inactive = false,
 -- })
 --
--- vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme tokyonight")
 
-require("tokyonight").setup({
-	transparent = true,
-	dim_inactive = false,
-})
-
-vim.cmd("colorscheme tokyonight-night")
+vim.cmd("colorscheme gruvbox")

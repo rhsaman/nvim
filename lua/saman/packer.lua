@@ -12,8 +12,6 @@ return require("packer").startup(function(use)
 	})
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 
-	use("rose-pine/neovim")
-
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
@@ -88,7 +86,9 @@ return require("packer").startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
+	--themes
 	use("folke/tokyonight.nvim")
+	use("morhetz/gruvbox")
 
 	use({
 		"numToStr/Comment.nvim",
