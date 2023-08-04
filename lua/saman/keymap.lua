@@ -71,3 +71,8 @@ keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to 
 keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>", opts)
 keymap.set("n", "<leader>q", "<cmd>Lspsaga code_action<CR>", { desc = "quick fix" }, opts)
+
+---------function helper------------------------
+keymap.set("i", "<C-h>", function()
+	vim.lsp.buf.signature_help()
+end, opts)
