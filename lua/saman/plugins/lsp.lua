@@ -110,9 +110,10 @@ lspconfig.gopls.setup({
 	settings = {
 		gopls = {
 			analyses = {
-				unusedparams = false,
+				unusedparams = true,
 			},
-			staticcheck = false,
+			usePlaceholders = true,
+			staticcheck = true,
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,
