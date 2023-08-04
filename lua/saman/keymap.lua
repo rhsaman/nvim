@@ -75,4 +75,7 @@ keymap.set("n", "<leader>q", "<cmd>Lspsaga code_action<CR>", { desc = "quick fix
 ---------function helper------------------------
 keymap.set("i", "<C-h>", function()
 	vim.lsp.buf.signature_help()
-end, opts)
+end, { silent = true, noremap = true, desc = "toggle signature" })
+keymap.set({ "n" }, "<Leader>k", function()
+	vim.lsp.buf.signature_help()
+end, { silent = true, noremap = true, desc = "toggle signature" })

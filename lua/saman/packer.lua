@@ -121,4 +121,6 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+	--------------------lsp signature----------------------------------
+	use("ray-x/lsp_signature.nvim")
 end)
