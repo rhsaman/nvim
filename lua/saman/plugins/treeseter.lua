@@ -14,6 +14,9 @@ treesitter.setup({
 	indent = { enable = true },
 	-- enable autotagging (w/ nvim-ts-autotag plugin)
 	autotag = { enable = true },
+	autopairs = {
+		enable = true,
+	},
 	-- ensure these language parsers are installed
 	ensure_installed = {
 		"json",
@@ -37,4 +40,16 @@ treesitter.setup({
 	},
 	-- auto install above language parsers
 	auto_install = true,
+	context_commentstring = {
+		enable = true,
+		config = {
+			javascript = {
+				__default = "// %s",
+				jsx_element = "{/* %s */}",
+				jsx_fragment = "{/* %s */}",
+				jsx_attribute = "// %s",
+				comment = "// %s",
+			},
+		},
+	},
 })

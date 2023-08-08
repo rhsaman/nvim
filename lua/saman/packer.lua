@@ -21,6 +21,7 @@ return require("packer").startup(function(use)
 	})
 	use("nvim-treesitter/playground")
 	use("nvim-treesitter/nvim-treesitter-context")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	use({
 		"nvim-neo-tree/neo-tree.nvim",
@@ -92,9 +93,6 @@ return require("packer").startup(function(use)
 
 	use({
 		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
 	})
 
 	use("easymotion/vim-easymotion")
