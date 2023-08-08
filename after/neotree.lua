@@ -184,9 +184,9 @@ require("neo-tree").setup({
 					},
 				},
 				follow_current_file = {
-					enabled = false, -- This will find and focus the file in the active buffer every time
+					enabled = true, -- This will find and focus the file in the active buffer every time
 					--               -- the current file is changed while the tree is open.
-					leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+					leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 				},
 				group_empty_dirs = false, -- when true, empty folders will be grouped together
 				hijack_netrw_behavior = "open_default", -- netrw disabled, opening a directory opens neo-tree
@@ -224,7 +224,7 @@ require("neo-tree").setup({
 				follow_current_file = {
 					enabled = true, -- This will find and focus the file in the active buffer every time
 					--              -- the current file is changed while the tree is open.
-					leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
+					leave_dirs_open = true, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
 				},
 				group_empty_dirs = true, -- when true, empty folders will be grouped together
 				show_unloaded = true,
@@ -252,6 +252,6 @@ require("neo-tree").setup({
 			},
 		})
 
-		vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+		vim.cmd([[nnoremap \ :Neotree filesystem reveal<cr>]])
 	end,
 })

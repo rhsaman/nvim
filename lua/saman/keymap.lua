@@ -2,7 +2,8 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { desc = "explorer" })
+keymap.set("n", "<leader>w", ":Neotree toggle<cr>", { desc = "explorer close" })
+keymap.set("n", "<leader>e", ":Neotree filesystem reveal<cr>", { desc = "explorer open" })
 -- use jk to exit insert mode
 keymap.set("i", "<leader>j", "<ESC>")
 
