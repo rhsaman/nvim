@@ -121,4 +121,7 @@ return require("packer").startup(function(use)
 	})
 	--------------------lsp signature----------------------------------
 	use("ray-x/lsp_signature.nvim")
+
+	--indent
+	use("lukas-reineke/indent-blankline.nvim")
 end)
