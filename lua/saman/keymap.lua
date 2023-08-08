@@ -36,7 +36,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope find_files theme=dropdown hidden=t
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep theme=dropdown <cr>", { desc = "string" })
 keymap.set("n", "<leader>fS", "<cmd>Telescope grep_string theme=dropdown <cr>", { desc = "grep" })
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers theme=dropdown <cr>", { desc = "buffers" })
-keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles hidden=true theme=dropdown<cr>", { desc = "recent" })
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles theme=dropdown<cr>", { desc = "recent" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope colorscheme<cr>", { desc = "colorscheme" })
 keymap.set("n", "<leader>fk", "<cmd> Telescope lsp_references theme=dropdown<cr>", { desc = "refrences" })
 -- telescope git commands (not on youtube nvim video)
