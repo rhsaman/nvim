@@ -4,4 +4,12 @@
 -- })
 --
 -- vim.cmd("colorscheme tokyonight")
-vim.cmd("colorscheme gruvbox")
+
+return {
+
+	"morhetz/gruvbox",
+	priority = 1000,
+	function()
+		vim.cmd("colorscheme gruvbox")
+	end,
+}
