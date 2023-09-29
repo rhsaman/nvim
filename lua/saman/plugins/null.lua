@@ -22,9 +22,9 @@ null_ls.setup({
 		formatting.gofumpt,
 		formatting.goimports,
 		formatting.golines,
-		formatting.black,
-		formatting.isort,
+		formatting.blue,
 		diagnostics.ruff,
+		formatting.isort,
 		diagnostics.eslint_d.with({ -- js/ts linter
 			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
 			condition = function(utils)
@@ -40,13 +40,7 @@ null_ls.setup({
 				group = augroup,
 				buffer = bufnr,
 				callback = function()
-					vim.lsp.buf.format({
-						filter = function(client)
-							--  only use null-ls for formatting instead of lsp server
-							return client.name == "null-ls"
-						end,
-						bufnr = bufnr,
-					})
+					vim.lsp.buf.format({ bufnr = bufnr })
 				end,
 			})
 		end
