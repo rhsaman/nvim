@@ -1,1 +1,2 @@
-require("saman")
+require("saman.core")
+require("saman.lazy")
