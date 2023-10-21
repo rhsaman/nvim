@@ -20,12 +20,13 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
+				file_ignore_patterns = { "node_modules", "env", "jpg", "png", "txt", "cache", "hdf5", "woff", "woff2" },
 			},
 		})
 
 		telescope.load_extension("fzf")
 
-    local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>fl', builtin.lsp_document_symbols	, {},{ desc = "list symbols" })
+		local builtin = require("telescope.builtin")
+		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, {}, { desc = "list symbols" })
 	end,
 }
