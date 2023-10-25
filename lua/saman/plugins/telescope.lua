@@ -27,6 +27,6 @@ return {
 		telescope.load_extension("fzf")
 
 		local builtin = require("telescope.builtin")
-		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, {}, { desc = "list symbols" })
+		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, { desc = "list symbols" })
 	end,
 }
