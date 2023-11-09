@@ -20,7 +20,7 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
-				file_ignore_patterns = { "node_modules", "env", "jpg", "png", "txt", "cache", "hdf5", "woff", "woff2" },
+				file_ignore_patterns = { "node_modules", "env", "jpg", "png", "cache", "hdf5", "woff", "woff2" },
 			},
 		})
 
