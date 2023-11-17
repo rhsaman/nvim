@@ -6,7 +6,7 @@ return {
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 		"nvim-tree/nvim-web-devicons",
 	},
-	priority = 1,
+	priority = 0,
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
@@ -21,7 +21,18 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
-				file_ignore_patterns = { "node_modules", "env", "jpg", "png", "cache", "hdf5", "woff", "woff2" },
+				file_ignore_patterns = {
+					".git",
+					"node_modules",
+					"mp4",
+					"env",
+					"jpg",
+					"png",
+					"cache",
+					"hdf5",
+					"woff",
+					"woff2",
+				},
 			},
 			pickers = {
 				find_files = {
