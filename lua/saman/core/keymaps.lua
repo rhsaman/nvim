@@ -4,9 +4,6 @@ local keymap = vim.keymap
 
 keymap.set("i", "jj", "<Esc>")
 
------------------test---------------------
-keymap.set("n", "<leader>c", "<cmd>!sh %<cr>", { desc = "curl" })
-
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
