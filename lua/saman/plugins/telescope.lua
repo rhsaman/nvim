@@ -32,6 +32,8 @@ return {
 					"hdf5",
 					"woff",
 					"woff2",
+					"jpeg",
+					"gif",
 				},
 			},
 			pickers = {
