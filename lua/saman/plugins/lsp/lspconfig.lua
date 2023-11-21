@@ -142,7 +142,7 @@ return {
 					analyses = {
 						unusedparams = true,
 					},
-					usePlaceholders = true,
+					usePlaceholders = false,
 					staticcheck = true,
 					hints = {
 						assignVariableTypes = true,

@@ -6,10 +6,13 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"windwp/nvim-ts-autotag",
+			"HiPhish/nvim-ts-rainbow2",
 		},
+
 		config = function()
 			-- import nvim-treesitter plugin
 			local treesitter = require("nvim-treesitter.configs")
+			local rainbow = require("ts-rainbow")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
@@ -27,22 +30,24 @@ return {
 					"json",
 					"javascript",
 					"typescript",
-					"tsx",
+					-- "tsx",
 					"yaml",
 					"html",
 					"css",
-					"prisma",
+					-- "prisma",
 					"markdown",
 					"markdown_inline",
-					"svelte",
-					"graphql",
+					-- "svelte",
+					-- "graphql",
 					"bash",
 					"lua",
 					"vim",
-					"dockerfile",
+					-- "dockerfile",
 					"gitignore",
 					"query",
-					"rust",
+					-- "rust",
+					"go",
+					"dart",
 				},
 				incremental_selection = {
 					enable = true,
@@ -67,7 +72,25 @@ return {
 						},
 					},
 				},
+				rainbow = {
+					query = {
+						"rainbow-parens",
+						html = "rainbow-tags",
+						latex = "rainbow-blocks",
+					},
+					strategy = rainbow.strategy.global,
+					hlgroups = {
+						"TSRainbowRed",
+						"TSRainbowYellow",
+						"TSRainbowBlue",
+						"TSRainbowOrange",
+						"TSRainbowGreen",
+						"TSRainbowViolet",
+						"TSRainbowCyan",
+					},
+				},
 			})
+			vim.cmd("autocmd VimEnter * TSBufEnable rainbow")
 		end,
 	},
 }
