@@ -80,13 +80,13 @@ return {
 					},
 					strategy = rainbow.strategy.global,
 					hlgroups = {
-						"TSRainbowRed",
+						"TSRainbowCyan",
 						"TSRainbowYellow",
+						"TSRainbowRed",
 						"TSRainbowBlue",
+						"TSRainbowViolet",
 						"TSRainbowOrange",
 						"TSRainbowGreen",
-						"TSRainbowViolet",
-						"TSRainbowCyan",
 					},
 				},
 			})
