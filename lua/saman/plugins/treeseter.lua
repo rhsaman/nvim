@@ -59,7 +59,7 @@ return {
 					},
 				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-				context_commentstring = {
+				ts_context_commentstring = {
 					enable = true,
 					enable_autocmd = false,
 					config = {
@@ -79,15 +79,6 @@ return {
 						latex = "rainbow-blocks",
 					},
 					strategy = rainbow.strategy.global,
-					hlgroups = {
-						"TSRainbowCyan",
-						"TSRainbowYellow",
-						"TSRainbowRed",
-						"TSRainbowBlue",
-						"TSRainbowViolet",
-						"TSRainbowOrange",
-						"TSRainbowGreen",
-					},
 				},
 			})
 			vim.cmd("autocmd VimEnter * TSBufEnable rainbow")
