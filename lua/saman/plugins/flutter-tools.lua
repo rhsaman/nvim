@@ -56,9 +56,9 @@ return {
 				enabled = false,
 			},
 			closing_tags = {
-				highlight = "notify", -- highlight for the closing tag
-				prefix = "______", -- character to use for close tag e.g. > Widget
-				enabled = false, -- set to false to disable
+				highlight = "808080", -- highlight for the closing tag
+				prefix = "___", -- character to use for close tag e.g. > Widget
+				enabled = true, -- set to false to disable
 			},
 			dev_log = {
 				enabled = true,
