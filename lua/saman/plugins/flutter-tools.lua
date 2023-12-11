@@ -53,7 +53,7 @@ return {
 			root_patterns = { ".git", "pubspec.yaml" }, -- patterns to find the root of your flutter project
 			fvm = false, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			widget_guides = {
-				enabled = false,
+				enabled = true,
 			},
 			closing_tags = {
 				highlight = "808080", -- highlight for the closing tag
