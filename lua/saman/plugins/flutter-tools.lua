@@ -15,7 +15,7 @@ return {
 					-- set to true to be able use the 'flutter_tools_decorations.device' in your statusline
 					-- this will show the currently running device if an application was started with a specific
 					-- device
-					device = false,
+					device = true,
 					-- set to true to be able use the 'flutter_tools_decorations.project_config' in your statusline
 					-- this will show the currently selected project configuration
 					project_config = false,
@@ -53,11 +53,11 @@ return {
 			root_patterns = { ".git", "pubspec.yaml" }, -- patterns to find the root of your flutter project
 			fvm = false, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			widget_guides = {
-				enabled = true,
+				enabled = false,
 			},
 			closing_tags = {
-				highlight = "808080", -- highlight for the closing tag
-				prefix = "___", -- character to use for close tag e.g. > Widget
+				-- highlight = "ErrorMsg", -- highlight for the closing tag
+				prefix = "//", -- character to use for close tag e.g. > Widget
 				enabled = true, -- set to false to disable
 			},
 			dev_log = {
@@ -66,7 +66,7 @@ return {
 				open_cmd = "tabedit", -- command to use to open the log buffer
 			},
 			dev_tools = {
-				autostart = false, -- autostart devtools server if not detected
+				autostart = true, -- autostart devtools server if not detected
 				auto_open_browser = false, -- Automatically opens devtools in the browser
 			},
 			outline = {
@@ -78,7 +78,7 @@ return {
 					enabled = true, -- whether or not to highlight color variables at all, only supported on flutter >= 2.10
 					background = true, -- highlight the background
 					background_color = nil, -- required, when background is transparent (i.e. background_color = { r = 19, g = 17, b = 24},)
-					foreground = false, -- highlight the foreground
+					foreground = true, -- highlight the foreground
 					virtual_text = true, -- show the highlight using virtual text
 					virtual_text_str = "■", -- the virtual text character to highlight
 				},
