@@ -14,7 +14,7 @@ return {
 				local bufnr = args.buf
 				local client = vim.lsp.get_client_by_id(args.data.client_id)
 				require("lsp-inlayhints").on_attach(client, bufnr)
-				vim.cmd("hi LspInlayHint guibg=#000")
+				vim.cmd("hi LspInlayHint ctermfg=71 guibg=#313325 ")
 			end,
 		})
 	end,
