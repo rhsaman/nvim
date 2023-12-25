@@ -18,6 +18,8 @@ return {
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
+			opts.inlay_hints = { enable = true }
+
 			-- set keybinds
 			opts.desc = "Show LSP references"
 			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
@@ -154,7 +156,6 @@ return {
 						rangeVariableTypes = true,
 					},
 				},
-				lsp_inlay_hints = { enable = true },
 			},
 			require("lsp_signature").setup({
 				bind = true, -- This is mandatory, otherwise border config won't get registered.
@@ -181,7 +182,6 @@ return {
 			on_attach = on_attach,
 			filetypes = { "python" },
 		})
-
 		-- configure lua server (with special settings)
 		lspconfig["lua_ls"].setup({
 			capabilities = capabilities,

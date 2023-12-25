@@ -7,6 +7,10 @@ keymap.set("i", "jj", "<Esc>")
 -- nohls
 keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "nohls" })
 
+keymap.set("n", "<leader>i", function()
+	require("lsp-inlayhints").toggle()
+end, { desc = "inlayhints toggle" })
+
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
