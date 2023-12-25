@@ -83,7 +83,7 @@ return {
 					virtual_text_str = "■", -- the virtual text character to highlight
 				},
 
-				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts), -- see available code actions, in visual mode will apply to selection
+				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action), -- see available code actions, in visual mode will apply to selection
 			},
 		})
 	end,
