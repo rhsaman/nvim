@@ -24,7 +24,7 @@ return {
 
 			debugger = {
 				-- make these two params true to enable debug mode
-				enabled = false,
+				enabled = true,
 				run_via_dap = false,
 				register_configurations = function(_)
 					require("dap").adapters.dart = {
@@ -63,10 +63,10 @@ return {
 			dev_log = {
 				enabled = true,
 				notify_errors = false, -- if there is an error whilst running then notify the user
-				open_cmd = "tabedit", -- command to use to open the log buffer
+				open_cmd = "vsplit", -- command to use to open the log buffer
 			},
 			dev_tools = {
-				autostart = true, -- autostart devtools server if not detected
+				autostart = false, -- autostart devtools server if not detected
 				auto_open_browser = false, -- Automatically opens devtools in the browser
 			},
 			outline = {
@@ -82,7 +82,14 @@ return {
 					virtual_text = true, -- show the highlight using virtual text
 					virtual_text_str = "■", -- the virtual text character to highlight
 				},
-
+				settings = {
+					showTodos = true,
+					completeFunctionCalls = true,
+					analysisExcludedFolders = { nil },
+					renameFilesWithClasses = "prompt", -- "always"
+					enableSnippets = true,
+					updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
+				},
 				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action), -- see available code actions, in visual mode will apply to selection
 			},
 		})
