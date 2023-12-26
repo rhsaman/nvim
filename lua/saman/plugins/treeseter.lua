@@ -10,12 +10,20 @@ return {
 		},
 
 		config = function()
-			-- import nvim-treesitter plugin
 			local treesitter = require("nvim-treesitter.configs")
 			local rainbow = require("ts-rainbow")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
+				rainbow = {
+					enable = true,
+					query = {
+						"rainbow-parens",
+						html = "rainbow-tags",
+						latex = "rainbow-blocks",
+					},
+					strategy = rainbow.strategy.global,
+				},
 				highlight = {
 					enable = true,
 				},
@@ -35,8 +43,8 @@ return {
 					"html",
 					"css",
 					-- "prisma",
-					"markdown",
-					"markdown_inline",
+					-- "markdown",
+					-- "markdown_inline",
 					-- "svelte",
 					-- "graphql",
 					"bash",
@@ -52,10 +60,10 @@ return {
 				incremental_selection = {
 					enable = true,
 					keymaps = {
-						init_selection = "<C-space>",
-						node_incremental = "<C-space>",
+						init_selection = "<leader>ci",
+						node_incremental = "<leader>cn",
 						scope_incremental = false,
-						node_decremental = "<bs>",
+						node_decremental = "<leader>co",
 					},
 				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
@@ -72,16 +80,7 @@ return {
 						},
 					},
 				},
-				rainbow = {
-					query = {
-						"rainbow-parens",
-						html = "rainbow-tags",
-						latex = "rainbow-blocks",
-					},
-					strategy = rainbow.strategy.global,
-				},
 			})
-			vim.cmd("autocmd VimEnter * TSBufEnable rainbow")
 		end,
 	},
 }
