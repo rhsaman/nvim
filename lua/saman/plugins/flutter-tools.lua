@@ -86,7 +86,7 @@ return {
 					showTodos = true,
 					completeFunctionCalls = true,
 					analysisExcludedFolders = { nil },
-					renameFilesWithClasses = "prompt", -- "always"
+					renameFilesWithClasses = "always", -- "always"
 					enableSnippets = true,
 					updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
 				},

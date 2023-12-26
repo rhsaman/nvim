@@ -7,9 +7,12 @@ keymap.set("i", "jj", "<Esc>")
 -- nohls
 keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "nohls" })
 
+-- inlayhints
 keymap.set("n", "<leader>i", function()
 	require("lsp-inlayhints").toggle()
 end, { desc = "inlayhints toggle" })
+
+keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
@@ -63,4 +66,8 @@ keymap.set({ "n" }, "<Leader>k", function()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- flutter
-keymap.set("n", "<leader>o", ":FlutterOutlineToggle<CR>", { desc = "flutter outline" })
+keymap.set("n", "<leader>ffo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
+keymap.set("n", "<leader>ffe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
+keymap.set("n", "<leader>ffc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
+keymap.set("n", "<leader>ffd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
+keymap.set("n", "<leader>ffq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
