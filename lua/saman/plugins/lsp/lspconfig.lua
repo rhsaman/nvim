@@ -114,17 +114,17 @@ return {
 		-- })
 
 		-- configure prisma orm server
-		lspconfig["prismals"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
+		-- lspconfig["prismals"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- })
 
 		-- configure graphql language server
-		lspconfig["graphql"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-		})
+		-- lspconfig["graphql"].setup({
+		-- 	capabilities = capabilities,
+		-- 	on_attach = on_attach,
+		-- 	filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+		-- })
 
 		-- configure emmet language server
 		lspconfig["emmet_ls"].setup({
@@ -133,6 +133,7 @@ return {
 			filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
 		})
 
+		-- golang
 		lspconfig.gopls.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -165,6 +166,7 @@ return {
 			}),
 		})
 
+		-- rust
 		lspconfig.rust_analyzer.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
@@ -199,6 +201,15 @@ return {
 							[vim.fn.stdpath("config") .. "/lua"] = true,
 						},
 					},
+				},
+			},
+		})
+
+		-- kubernetes
+		lspconfig.yamlls.setup({
+			settings = {
+				yaml = {
+					schemas = { kubernetes = "globPattern" },
 				},
 			},
 		})
