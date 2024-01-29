@@ -10,6 +10,7 @@ return {
 			auto_save_enabled = true,
 			auto_session_suppress_dirs = {
 				"~/",
+				"/",
 				"~/Dev/",
 				"~/Downloads",
 				"~/Documents",
