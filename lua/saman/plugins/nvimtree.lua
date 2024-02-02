@@ -68,13 +68,14 @@ return {
 				},
 			},
 			filters = {
-				dotfiles = false,
+				dotfiles = true,
 				git_clean = false,
 				no_buffer = false,
 				custom = {
 					"node_modules", -- filter out node_modules directory
 					".git", -- filter out .git directory
 					".DS_Store",
+					".vscode",
 				},
 				exclude = {},
 			},
