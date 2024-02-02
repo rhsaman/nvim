@@ -3,13 +3,22 @@ return {
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 	},
+
 	config = function()
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 		vim.opt.termguicolors = true
 
 		require("nvim-tree").setup({
-
+			disable_netrw = true,
+			hijack_netrw = true,
+			open_on_tab = false,
+			hijack_cursor = false,
+			update_cwd = true,
+			hijack_directories = {
+				enable = true,
+				auto_open = true,
+			},
 			sort = {
 				sorter = "case_sensitive",
 			},
@@ -24,11 +33,21 @@ return {
 				indent_markers = { enable = true },
 
 				icons = {
-					webdev_colors = true,
+					web_devicons = {
+						file = {
+							enable = true,
+							color = true,
+						},
+						folder = {
+							enable = false,
+							color = true,
+						},
+					},
 					show = { folder_arrow = false, file = true, folder = true, git = true },
 					glyphs = {
 						default = "",
 						symlink = "",
+						modified = "●",
 						git = {
 							unstaged = "M",
 							staged = "S",
@@ -36,7 +55,7 @@ return {
 							renamed = "R",
 							deleted = "D",
 							untracked = "",
-							ignored = "I",
+							ignored = "◌",
 						},
 						folder = {
 							default = "",
@@ -64,16 +83,6 @@ return {
 				ignore = true,
 				timeout = 500,
 			},
-			disable_netrw = true,
-			hijack_netrw = true,
-			--open_on_setup = false,
-			open_on_tab = false,
-			hijack_cursor = false,
-			update_cwd = true,
-			hijack_directories = {
-				enable = true,
-				auto_open = true,
-			},
 			update_focused_file = {
 				enable = true,
 				update_cwd = true,
@@ -87,9 +96,10 @@ return {
 					warning = "",
 					error = "",
 				},
-			}, -- on_attach = my_on_attach,
+			},
+
 			vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "toggle tree" }),
-			vim.keymap.set("n", "zz", "::NvimTreeCollapse<CR>", { desc = "collapse tree" }),
+			vim.keymap.set("n", "<leader>z", "::NvimTreeCollapse<CR>", { desc = "collapse tree" }),
 		})
 	end,
 }
