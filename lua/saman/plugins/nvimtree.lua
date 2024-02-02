@@ -21,15 +21,16 @@ return {
 
 				highlight_modified = "all",
 				highlight_git = true,
+				indent_markers = { enable = true },
+
 				icons = {
 					webdev_colors = true,
 					show = { folder_arrow = false, file = true, folder = true, git = true },
-					-- indent_markers = { enable = true },
 					glyphs = {
 						default = "",
 						symlink = "",
 						git = {
-							unstaged = "U",
+							unstaged = "M",
 							staged = "S",
 							unmerged = "UM",
 							renamed = "R",
@@ -46,7 +47,6 @@ return {
 						},
 					},
 				},
-				indent_markers = { enable = true },
 			},
 			filters = {
 				dotfiles = false,
