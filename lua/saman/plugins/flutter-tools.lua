@@ -91,7 +91,7 @@ return {
 					enableSnippets = true,
 					updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.
 				},
-				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action), -- see available code actions, in visual mode will apply to selection
+				vim.keymap.set({ "n", "v" }, "<leader>cf", vim.lsp.buf.code_action, { desc = "flutter code action" }), -- see available code actions, in visual mode will apply to selection
 			},
 		})
 	end,
