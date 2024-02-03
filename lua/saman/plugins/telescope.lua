@@ -62,7 +62,7 @@ return {
 		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, { desc = "list symbols" })
 		vim.keymap.set("n", "<leader>fd", builtin.find_files, { desc = "file" })
 		vim.keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "string" })
-		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "recent" })
+		vim.keymap.set("n", "<leader>ff", builtin.oldfiles, { desc = "recent" })
 		vim.keymap.set("n", "<leader>fk", builtin.lsp_references, { desc = "refrences" })
 	end,
 }

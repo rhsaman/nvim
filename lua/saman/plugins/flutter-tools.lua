@@ -27,13 +27,13 @@ return {
 				enabled = true,
 				run_via_dap = false,
 				register_configurations = function(_)
-					require("dap").adapters.dart = {
+					require("saman.plugins.dapsp.dap").adapters.dart = {
 						type = "executable",
 						command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
 						args = { "flutter" },
 					}
 
-					require("dap").configurations.dart = {
+					require("saman.plugins.dapsp.dap").configurations.dart = {
 						{
 							type = "dart",
 							request = "launch",

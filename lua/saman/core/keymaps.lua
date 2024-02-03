@@ -66,8 +66,8 @@ keymap.set({ "n" }, "<Leader>k", function()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
 -- flutter
-keymap.set("n", "<leader>ffo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
-keymap.set("n", "<leader>ffe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
-keymap.set("n", "<leader>ffc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
-keymap.set("n", "<leader>ffd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
-keymap.set("n", "<leader>ffq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
+keymap.set("n", "<leader>Fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
+keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
+keymap.set("n", "<leader>Fc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
+keymap.set("n", "<leader>Fd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
+keymap.set("n", "<leader>Fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
