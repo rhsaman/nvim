@@ -27,13 +27,13 @@ return {
 				enabled = true,
 				run_via_dap = false,
 				register_configurations = function(_)
-					require("saman.plugins.dapsp.dap").adapters.dart = {
+					require("saman.plugins.daps.dap").adapters.dart = {
 						type = "executable",
 						command = vim.fn.stdpath("data") .. "/mason/bin/dart-debug-adapter",
 						args = { "flutter" },
 					}
 
-					require("saman.plugins.dapsp.dap").configurations.dart = {
+					require("saman.plugins.daps.dap").configurations.dart = {
 						{
 							type = "dart",
 							request = "launch",
@@ -63,7 +63,8 @@ return {
 			dev_log = {
 				enabled = true,
 				notify_errors = false, -- if there is an error whilst running then notify the user
-				open_cmd = "vsplit", -- command to use to open the log buffer
+				open_cmd = "40vs", -- command to use to open the log buffer
+				-- open_cmd = "tabedit", -- command to use to open the log buffer
 			},
 			dev_tools = {
 				autostart = true, -- autostart devtools server if not detected

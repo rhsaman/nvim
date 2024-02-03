@@ -71,3 +71,4 @@ keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulato
 keymap.set("n", "<leader>Fc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
 keymap.set("n", "<leader>Fd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
 keymap.set("n", "<leader>Fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
+keymap.set("n", "<leader>Fr", ":FlutterRun<CR>", { desc = "Flutter Run" })
