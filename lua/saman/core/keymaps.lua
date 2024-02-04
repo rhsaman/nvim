@@ -8,7 +8,7 @@ keymap.set("i", "jj", "<Esc>")
 keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "nohls" })
 
 -- inlayhints
-keymap.set("n", "<leader>i", function()
+keymap.set("n", "<leader>ci", function()
 	require("lsp-inlayhints").toggle()
 end, { desc = "inlayhints toggle" })
 
