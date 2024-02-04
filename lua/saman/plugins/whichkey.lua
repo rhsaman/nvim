@@ -23,6 +23,7 @@ return {
 			w = { name = "session" },
 			s = { name = "pane" },
 			c = { name = "code" },
+			i = { name = "iron" },
 		}, { prefix = "<leader>" })
 	end,
 }
