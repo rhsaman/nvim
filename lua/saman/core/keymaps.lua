@@ -65,6 +65,9 @@ keymap.set({ "n" }, "<Leader>k", function()
 	vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
+-- dap ui
+keymap.set("n", "<leader>du", "<Cmd>lua require('dapui').toggle()<CR>", { desc = "dap ui" })
+
 -- flutter
 keymap.set("n", "<leader>Fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
 keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
