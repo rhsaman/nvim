@@ -40,7 +40,7 @@ return {
 						},
 						folder = {
 							enable = true,
-							color = false,
+							color = true,
 						},
 					},
 					show = { folder_arrow = false, file = true, folder = true, git = true },
@@ -68,7 +68,7 @@ return {
 				},
 			},
 			filters = {
-				dotfiles = false,
+				dotfiles = true,
 				git_clean = false,
 				no_buffer = false,
 				custom = {
