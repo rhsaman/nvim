@@ -15,6 +15,7 @@
   "image.nvim": { "branch": "master", "commit": "77df64af37ff68a1f593aa4f79b42b1388479239" },
   "indent-blankline.nvim": { "branch": "master", "commit": "12e92044d313c54c438bd786d11684c88f6f78cd" },
   "iron.nvim": { "branch": "master", "commit": "7f876ee3e1f4ea1e5284b1b697cdad5b256e8046" },
+  "jupynium.nvim": { "branch": "master", "commit": "71c3c15f49e693e7c90e1f53051e04f4c5887af9" },
   "jupyter-nvim": { "branch": "main", "commit": "90fdc9ba454189a1151b7c238bda58a9b78d29e7" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
   "lsp-inlayhints.nvim": { "branch": "main", "commit": "d981f65c9ae0b6062176f0accb9c151daeda6f16" },
