@@ -60,11 +60,11 @@ return {
 					filetypes = { "norg" },
 				},
 			},
-			max_width = nil,
+			max_width = 100,
 			max_height = nil,
 			max_width_window_percentage = nil,
 			max_height_window_percentage = 50,
-			window_overlap_clear_enabled = false, -- toggles images when windows are overlapped
+			window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
 			window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "" },
 			editor_only_render_when_focused = false, -- auto show/hide images when the editor gains/looses focus
 			tmux_show_only_in_active_window = false, -- auto show/hide images in the correct Tmux window (needs visual-activity off)
@@ -81,21 +81,21 @@ return {
 			end,
 		})
 
-		vim.api.nvim_create_autocmd("BufEnter", {
-			pattern = "*.py",
-			callback = function(e)
-				if string.match(e.file, ".otter.") then
-					return
-				end
-				if require("molten.status").initialized() == "Molten" then -- this is kinda a hack...
-					vim.fn.MoltenUpdateOption("virt_lines_off_by_1", false)
-					vim.fn.MoltenUpdateOption("virt_text_output", false)
-				else
-					vim.g.molten_virt_lines_off_by_1 = false
-					vim.g.molten_virt_text_output = false
-				end
-			end,
-		})
+		-- vim.api.nvim_create_autocmd("BufEnter", {
+		-- 	pattern = "*.py",
+		-- 	callback = function(e)
+		-- 		if string.match(e.file, ".otter.") then
+		-- 			return
+		-- 		end
+		-- 		if require("molten.status").initialized() == "Molten" then -- this is kinda a hack...
+		-- 			vim.fn.MoltenUpdateOption("virt_lines_off_by_1", false)
+		-- 			vim.fn.MoltenUpdateOption("virt_text_output", false)
+		-- 		else
+		-- 			vim.g.molten_virt_lines_off_by_1 = false
+		-- 			vim.g.molten_virt_text_output = false
+		-- 		end
+		-- 	end,
+		-- })
 
 		-- Undo those config changes when we go back to a markdown or quarto file
 		vim.api.nvim_create_autocmd("BufEnter", {
