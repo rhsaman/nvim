@@ -14,17 +14,11 @@ return {
 		telescope.setup({
 			extensions = {
 				frecency = {
-					db_root = "/Users/saman",
 					show_scores = true,
 					show_unindexed = true,
 					ignore_patterns = { "*.git/*", "*/tmp/*" },
 					disable_devicons = false,
-					workspaces = {
-						["conf"] = "/Users/saman/.config",
-						["data"] = "/Users/saman/.local/share",
-						["project"] = "/Users/saman/Documents/code",
-						["wiki"] = "/Users/saman/wiki",
-					},
+					workspace_scan_cmd = { "rg -.g '!.git' --files" },
 				},
 			},
 			defaults = {
