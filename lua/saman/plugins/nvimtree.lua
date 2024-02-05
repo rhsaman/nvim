@@ -36,11 +36,11 @@ return {
 					web_devicons = {
 						file = {
 							enable = true,
-							color = true,
+							color = false,
 						},
 						folder = {
-							enable = false,
-							color = true,
+							enable = true,
+							color = false,
 						},
 					},
 					show = { folder_arrow = false, file = true, folder = true, git = true },
@@ -48,15 +48,15 @@ return {
 						default = "",
 						symlink = "",
 						modified = "●",
-						git = {
-							unstaged = "M",
-							staged = "S",
-							unmerged = "UM",
-							renamed = "R",
-							deleted = "D",
-							untracked = "",
-							ignored = "◌",
-						},
+						-- git = {
+						-- 	unstaged = "M",
+						-- 	staged = "S",
+						-- 	unmerged = "UM",
+						-- 	renamed = "R",
+						-- 	deleted = "D",
+						-- 	untracked = "",
+						-- 	ignored = "◌",
+						-- },
 						folder = {
 							default = "",
 							open = "",
