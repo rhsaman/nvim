@@ -24,6 +24,7 @@ return {
 			s = { name = "pane" },
 			c = { name = "code" },
 			i = { name = "iron" },
+			j = { name = "jupynium" },
 		}, { prefix = "<leader>" })
 	end,
 }
