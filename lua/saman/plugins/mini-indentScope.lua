@@ -45,7 +45,7 @@ return {
 			},
 
 			-- Which character to use for drawing scope indicator
-			symbol = "|",
+			symbol = "╎",
 		}) -- No need to copy this inside `setup()`. Will be used automatically.
 	end,
 }
