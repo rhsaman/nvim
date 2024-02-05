@@ -75,3 +75,13 @@ keymap.set("n", "<leader>Fc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
 keymap.set("n", "<leader>Fd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
 keymap.set("n", "<leader>Fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
 keymap.set("n", "<leader>Fr", ":FlutterRun<CR>", { desc = "Flutter Run" })
+
+-- molten
+keymap.set("n", "<leader>mi", ":MoltenInit<CR>", { desc = "init" })
+keymap.set("n", "<leader>mI", ":MoltenInfo<CR>", { desc = "info" })
+keymap.set("n", "<leader>ml", ":MoltenEvaluateLine<CR>", { desc = "eval line" })
+keymap.set("v", "<leader>mv", "::<C-u>MoltenEvaluateVisual<CR>gv", { desc = "eval visual" })
+keymap.set("n", "<leader>mO", ":MoltenEvaluateOperator<CR>", { desc = "eval operator" })
+keymap.set("n", "<leader>mo", ":MoltenShowOutput<CR>", { desc = "show output" })
+keymap.set("n", "<leader>mh", ":MoltenHideOutput<CR>", { desc = "hide output" })
+keymap.set("n", "<leader>me", "noautocmd MoltenEnterOutput<CR>", { desc = "enter output" })
