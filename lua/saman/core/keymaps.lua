@@ -85,3 +85,4 @@ keymap.set("n", "<leader>mO", ":MoltenEvaluateOperator<CR>", { desc = "eval oper
 keymap.set("n", "<leader>mo", ":MoltenShowOutput<CR>", { desc = "show output" })
 keymap.set("n", "<leader>mh", ":MoltenHideOutput<CR>", { desc = "hide output" })
 keymap.set("n", "<leader>me", "noautocmd MoltenEnterOutput<CR>", { desc = "enter output" })
+keymap.set("n", "<leader>mD", ":MoltenDelete<CR>", { desc = "Delete" })
