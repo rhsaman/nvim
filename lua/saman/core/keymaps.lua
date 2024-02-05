@@ -76,18 +76,6 @@ keymap.set("n", "<leader>Fd", ":FlutterDevices<CR>", { desc = "Flutter Devices" 
 keymap.set("n", "<leader>Fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
 keymap.set("n", "<leader>Fr", ":FlutterRun<CR>", { desc = "Flutter Run" })
 
--- molten
-keymap.set("n", "<leader>mi", ":MoltenInit<CR>", { desc = "Init" })
-keymap.set("n", "<leader>mI", ":MoltenInfo<CR>", { desc = "Info" })
-keymap.set("n", "<leader>ml", ":MoltenEvaluateLine<CR>", { desc = "Eval Line" })
-keymap.set("v", "<leader>mv", "::<C-u>MoltenEvaluateVisual<CR>", { desc = "Eval Visual" })
-keymap.set("n", "<leader>mO", ":MoltenEvaluateOperator<CR>", { desc = "Eval Operator" })
-keymap.set("n", "<leader>mo", ":MoltenShowOutput<CR>", { desc = "Show Output" })
-keymap.set("n", "<leader>mh", ":MoltenHideOutput<CR>", { desc = "Hide Output" })
-keymap.set("n", "<leader>me", "noautocmd MoltenEnterOutput<CR>", { desc = "Enter Output" })
-keymap.set("n", "<leader>md", ":MoltenDeinit<CR>", { desc = "Deinit" })
-keymap.set("n", "<leader>mD", ":MoltenDelete<CR>", { desc = "Delete" })
-
 -- jupynium
 keymap.set("n", "<leader>jS", ":JupyniumStartSync<CR>", { desc = "Start Sync" })
 keymap.set("n", "<leader>jq", ":JupyniumStopSync<CR>", { desc = "Stop Sync" })
