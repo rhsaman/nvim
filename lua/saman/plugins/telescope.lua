@@ -67,6 +67,7 @@ return {
 				},
 			},
 		})
+
 		if insert then
 			if self.sorting_strategy == "descending" then
 				vim.api.nvim_buf_set_lines(self.results_bufnr, 0, 1, false, {})

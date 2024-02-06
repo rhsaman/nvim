@@ -25,10 +25,10 @@ return {
 			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
 			opts.desc = "Go to declaration"
-			keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+			keymap.set("n", "gd", vim.lsp.buf.declaration, opts) -- go to declaration
 
 			opts.desc = "Show LSP definitions"
-			keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
+			keymap.set("n", "gD", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
 			opts.desc = "Show LSP implementations"
 			keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", opts) -- show lsp implementations
@@ -39,14 +39,8 @@ return {
 			opts.desc = "See available code actions"
 			keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
 
-			opts.desc = "Smart rename"
-			keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
-
-			opts.desc = "Show buffer diagnostics"
-			keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
-
 			opts.desc = "Show line diagnostics"
-			keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+			keymap.set("n", "<leader>fD", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 			opts.desc = "Go to previous diagnostic"
 			keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -179,32 +173,10 @@ return {
 		})
 
 		-- python
-		-- local util = require("lspconfig/util")
-		-- local path = util.path
-		-- local function get_python_path(workspace)
-		-- 	-- Use activated virtualenv.
-		-- 	if vim.env.VIRTUAL_ENV then
-		-- 		return path.join(vim.env.VIRTUAL_ENV, "bin", "python")
-		-- 	end
-		-- 	-- Find and use virtualenv in workspace directory.
-		-- 	for _, pattern in ipairs({ "*", ".*" }) do
-		-- 		local match = vim.fn.glob(path.join(workspace, pattern, "pyvenv.cfg"))
-		-- 		if match ~= "" then
-		-- 			return path.join(path.dirname(match), "bin", "python")
-		-- 		end
-		-- 	end
-		-- 	-- Fallback to system Python.
-		-- 	return exepath("python3")
-		-- end
-
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "python" },
-
-			-- before_init = function(_, config)
-			-- 	config.settings.python.pythonPath = get_python_path(config.root_dir)
-			-- end,
 		})
 
 		-- lua server (with special settings)
