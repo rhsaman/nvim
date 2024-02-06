@@ -26,6 +26,7 @@ return {
 				},
 				highlight = {
 					enable = true,
+					additional_vim_regex_highlighting = false,
 				},
 				-- enable indentation
 				indent = { enable = true },
@@ -43,27 +44,25 @@ return {
 					"html",
 					"css",
 					-- "prisma",
-					-- "markdown",
+					"markdown",
 					-- "markdown_inline",
 					-- "svelte",
 					-- "graphql",
 					"bash",
 					"lua",
 					"vim",
-					-- "dockerfile",
+					"dockerfile",
 					"gitignore",
 					"query",
 					-- "rust",
 					"go",
 					"dart",
 				},
+
 				incremental_selection = {
 					enable = true,
 					keymaps = {
 						init_selection = "<leader>vi",
-						node_incremental = "<leader>cn",
-						scope_incremental = false,
-						node_decremental = "<leader>co",
 					},
 				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx

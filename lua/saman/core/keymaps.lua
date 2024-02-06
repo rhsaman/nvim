@@ -93,6 +93,4 @@ keymap.set("n", "<leader>br", ":BufferLineCloseRight<cr>", { desc = "Close Right
 keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
 keymap.set("n", "L", ":BufferLineCycleNext<cr>", { desc = "Next" })
 keymap.set("n", "H", ":BufferLineCyclePrev<cr>", { desc = "Preview" })
-keymap.set("n", "K", ":BufferLineMoveNext<cr>", { desc = "Move Next" })
-keymap.set("n", "J", ":BufferLineMovePrev<cr>", { desc = "Move Preview" })
 keymap.set("n", "<leader>bp", ":BufferLinePick<cr>", { desc = "Pick" })
