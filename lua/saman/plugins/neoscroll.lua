@@ -2,7 +2,7 @@ return {
 	"karb94/neoscroll.nvim",
 	config = function()
 		require("neoscroll").setup({
-			mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "<C-y>", "<C-e>", "zt", "zz", "zb" },
+			mappings = { "<C-u>", "<C-d>", "<C-b>", "<C-f>", "<C-y>", "<C-e>", "zt", "zb" },
 			hide_cursor = true, -- Hide cursor while scrolling
 			stop_eof = true, -- Stop at <EOF> when scrolling downwards
 			respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
