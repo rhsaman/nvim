@@ -37,6 +37,7 @@ return {
 			color_overrides = {},
 			custom_highlights = {},
 			integrations = {
+				ufo = true,
 				flash = true,
 				cmp = true,
 				gitsigns = true,
