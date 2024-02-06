@@ -36,11 +36,11 @@ return {
 					web_devicons = {
 						file = {
 							enable = true,
-							color = false,
+							color = true,
 						},
 						folder = {
 							enable = true,
-							color = true,
+							color = false,
 						},
 					},
 					show = { folder_arrow = false, file = true, folder = true, git = true },

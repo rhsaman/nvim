@@ -3,7 +3,7 @@ return {
 	dependencies = "kevinhwang91/promise-async",
 
 	config = function()
-		vim.o.foldcolumn = "1"
+		-- vim.o.foldcolumn = "1"
 
 		local language_servers = require("lspconfig").util.available_servers() -- or list servers manually like {'gopls', 'clangd'}
 
