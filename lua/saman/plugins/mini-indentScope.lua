@@ -3,7 +3,6 @@ return {
 	version = "*",
 	config = function()
 		require("mini.indentscope").setup({
-			-- Draw options
 			draw = {
 				-- Delay (in ms) between event and start of drawing scope indicator
 				delay = 100,
@@ -20,9 +19,6 @@ return {
 			-- Module mappings. Use `''` (empty string) to disable one.
 			mappings = {
 				-- Textobjects
-				object_scope = "ii",
-				object_scope_with_border = "ai",
-
 				-- Motions (jump to respective border line; if not present - body line)
 				goto_top = "[i",
 				goto_bottom = "]i",
@@ -45,7 +41,7 @@ return {
 			},
 
 			-- Which character to use for drawing scope indicator
-			symbol = "╎",
+			symbol = "│",
 		}) -- No need to copy this inside `setup()`. Will be used automatically.
 	end,
 }

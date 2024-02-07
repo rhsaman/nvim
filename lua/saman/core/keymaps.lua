@@ -88,9 +88,9 @@ keymap.set("n", "<leader>jr", ":JupyniumRestartKernel<CR>", { desc = "Restart Ke
 keymap.set("n", "<leader>jn", "I# %%<Esc>", { desc = "New Cell" })
 
 -- bufferLine
-keymap.set("n", "<leader>bl", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
-keymap.set("n", "<leader>br", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
-keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
+keymap.set("n", "tl", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
+keymap.set("n", "tr", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
+keymap.set("n", "to", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
 keymap.set("n", "L", ":BufferLineCycleNext<cr>", { desc = "Next" })
 keymap.set("n", "H", ":BufferLineCyclePrev<cr>", { desc = "Preview" })
-keymap.set("n", "<leader>bp", ":BufferLinePick<cr>", { desc = "Pick" })
+keymap.set("n", "tp", ":BufferLinePick<cr>", { desc = "Pick" })
