@@ -9,6 +9,7 @@ return {
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
+		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
 			extensions = {
@@ -28,6 +29,7 @@ return {
 						["<C-j>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
+					n = { ["<C-l>"] = trouble.open_with_trouble },
 				},
 				file_ignore_patterns = {
 					".git",
@@ -67,7 +69,6 @@ return {
 				},
 			},
 		})
-
 		if insert then
 			if self.sorting_strategy == "descending" then
 				vim.api.nvim_buf_set_lines(self.results_bufnr, 0, 1, false, {})

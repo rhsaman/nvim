@@ -19,12 +19,13 @@ return {
 			g = { name = "git" },
 			f = { name = "files" },
 			F = { name = "flutter" },
-			t = { name = "tab" },
+			T = { name = "tab" },
 			w = { name = "session" },
 			s = { name = "pane" },
 			c = { name = "code" },
 			i = { name = "iron" },
 			j = { name = "jupynium" },
+			t = { name = "Trouble" },
 		}, { prefix = "<leader>" })
 	end,
 }

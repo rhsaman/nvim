@@ -29,10 +29,10 @@ keymap.set("n", "<leader>s=", "<C-w>=", { desc = "resize equal" })
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "maximization" })
 
 -----------------------tabs-----------------------
-keymap.set("n", "<leader>to", ":tabnew<CR>", { desc = "open tab" })
-keymap.set("n", "<leader>tx", ":tabclose<CR>", { desc = "close tab" })
-keymap.set("n", "<leader>tk", ":tabn<CR>", { desc = "next tab" })
-keymap.set("n", "<leader>tj", ":tabp<CR>", { desc = "previous tab" })
+keymap.set("n", "<leader>To", ":tabnew<CR>", { desc = "open tab" })
+keymap.set("n", "<leader>Tx", ":tabclose<CR>", { desc = "close tab" })
+keymap.set("n", "<leader>Tk", ":tabn<CR>", { desc = "next tab" })
+keymap.set("n", "<leader>Tj", ":tabp<CR>", { desc = "previous tab" })
 
 -- telescope git commands (not on youtube nvim video)
 keymap.set(

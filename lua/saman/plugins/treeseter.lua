@@ -61,9 +61,6 @@ return {
 
 				incremental_selection = {
 					enable = true,
-					keymaps = {
-						init_selection = "<leader>vi",
-					},
 				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
 				ts_context_commentstring = {
