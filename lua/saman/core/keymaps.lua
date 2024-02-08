@@ -57,14 +57,6 @@ keymap.set(
 -------------------------------git fugitive----------------------------
 keymap.set("n", "<leader>gi", "<cmd>:Git<cr>", { desc = "fugitive" })
 
----------function helper------------------------
-keymap.set("i", "<C-h>", function()
-	vim.lsp.buf.signature_help()
-end, { silent = true, noremap = true, desc = "toggle signature" })
-keymap.set({ "n" }, "<Leader>k", function()
-	vim.lsp.buf.signature_help()
-end, { silent = true, noremap = true, desc = "toggle signature" })
-
 -- flutter
 keymap.set("n", "<leader>Fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
 keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })

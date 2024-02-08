@@ -1,5 +1,6 @@
 return {
 	"lvimuser/lsp-inlayhints.nvim",
+	event = "VeryLazy",
 	config = function()
 		require("lsp-inlayhints").setup()
 		--lsp-inlayhints for show types
