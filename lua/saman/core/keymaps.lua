@@ -65,9 +65,6 @@ keymap.set({ "n" }, "<Leader>k", function()
 	vim.lsp.buf.signature_help()
 end, { silent = true, noremap = true, desc = "toggle signature" })
 
--- dap ui
-keymap.set("n", "<leader>du", "<Cmd>lua require('dapui').toggle()<CR>", { desc = "dap ui" })
-
 -- flutter
 keymap.set("n", "<leader>Fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
 keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
@@ -88,7 +85,7 @@ keymap.set("n", "<leader>jr", ":JupyniumRestartKernel<CR>", { desc = "Restart Ke
 keymap.set("n", "<leader>jn", "I# %%<Esc>", { desc = "New Cell" })
 
 -- bufferLine
-keymap.set("n", "tl", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
+keymap.set("n", "th", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
 keymap.set("n", "tr", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
 keymap.set("n", "to", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
 keymap.set("n", "L", ":BufferLineCycleNext<cr>", { desc = "Next" })

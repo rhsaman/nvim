@@ -13,7 +13,7 @@ return {
 			require("dap").step_into()
 		end, { desc = "step_into" })
 
-		vim.keymap.set("n", "<Leader>dso", function()
+		vim.keymap.set("n", "<Leader>dO", function()
 			require("dap").step_out()
 		end, { desc = "step_out" })
 
@@ -21,11 +21,7 @@ return {
 			require("dap").toggle_breakpoint()
 		end, { desc = "toggle_breakpoint" })
 
-		vim.keymap.set("n", "<Leader>dB", function()
-			require("dap").set_breakpoint()
-		end, { desc = "set_breakpoint" })
-
-		vim.keymap.set("n", "<Leader>dlp", function()
+		vim.keymap.set("n", "<Leader>dm", function()
 			require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
 		end, { desc = "Log point message: " })
 
