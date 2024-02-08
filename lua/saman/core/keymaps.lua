@@ -75,11 +75,3 @@ keymap.set("n", "<leader>ju", ":JupyniumScrollUp<CR>", { desc = "Scroll Up" })
 keymap.set("n", "<leader>jd", ":JupyniumScrollDown<CR>", { desc = "Scroll Down" })
 keymap.set("n", "<leader>jr", ":JupyniumRestartKernel<CR>", { desc = "Restart Kernel" })
 keymap.set("n", "<leader>jn", "I# %%<Esc>", { desc = "New Cell" })
-
--- bufferLine
-keymap.set("n", "th", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
-keymap.set("n", "tr", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
-keymap.set("n", "to", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
-keymap.set("n", "L", ":BufferLineCycleNext<cr>", { desc = "Next" })
-keymap.set("n", "H", ":BufferLineCyclePrev<cr>", { desc = "Preview" })
-keymap.set("n", "tp", ":BufferLinePick<cr>", { desc = "Pick" })
