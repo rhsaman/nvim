@@ -1,6 +1,7 @@
 return {
 	"mxsdev/nvim-dap-vscode-js",
 	dependencies = { "mfussenegger/nvim-dap", "Joakker/lua-json5", build = "./install.sh" },
+	ft = { "javascriptreact", "javascript", "typescript" },
 
 	config = function()
 		require("dap-vscode-js").setup({

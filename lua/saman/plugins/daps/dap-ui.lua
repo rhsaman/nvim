@@ -1,6 +1,7 @@
 return {
 	"rcarriga/nvim-dap-ui",
 	dependencies = { "mfussenegger/nvim-dap" },
+	event = "VeryLazy",
 	config = function()
 		require("dapui").setup()
 

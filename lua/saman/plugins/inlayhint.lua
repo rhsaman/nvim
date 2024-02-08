@@ -1,6 +1,18 @@
 return {
 	"lvimuser/lsp-inlayhints.nvim",
-	event = "VeryLazy",
+	-- event = "VeryLazy",
+	ft = { "go", "rust" },
+
+	keys = {
+		{
+			"<leader>ci",
+			function()
+				require("lsp-inlayhints").toggle()
+			end,
+			desc = "inlayhints toggle",
+		},
+	},
+
 	config = function()
 		require("lsp-inlayhints").setup()
 		--lsp-inlayhints for show types

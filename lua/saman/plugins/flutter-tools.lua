@@ -1,9 +1,19 @@
 return {
 	"akinsho/flutter-tools.nvim",
-	lazy = false,
+	-- lazy = false,
+	ft = { "dart" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"stevearc/dressing.nvim", -- optional for vim.ui.select
+	},
+	keys = {
+		-- flutter
+		{ "<leader>Fo", ":FlutterOutlineToggle<CR>", desc = "Flutter Outline", ft = "dart" },
+		{ "<leader>Fe", ":FlutterEmulators<CR>", desc = "Flutter Emulators", ft = "dart" },
+		{ "<leader>Fc", ":FlutterDetach<CR>", desc = "Flutter Detach", ft = "dart" },
+		{ "<leader>Fd", ":FlutterDevices<CR>", desc = "Flutter Devices", ft = "dart" },
+		{ "<leader>Fq", ":FlutterQuit<CR>", desc = "Flutter Quit", ft = "dart" },
+		{ "<leader>Fr", ":FlutterRun<CR>", desc = "Flutter Run", ft = "dart" },
 	},
 	config = function()
 		require("flutter-tools").setup({

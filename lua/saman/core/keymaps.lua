@@ -7,11 +7,6 @@ keymap.set("i", "jj", "<Esc>")
 -- nohls
 keymap.set("n", "<leader>n", "<cmd>nohls<cr>", { desc = "nohls" })
 
--- inlayhints
-keymap.set("n", "<leader>ci", function()
-	require("lsp-inlayhints").toggle()
-end, { desc = "inlayhints toggle" })
-
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 
 -- window management
@@ -56,22 +51,3 @@ keymap.set(
 )
 -------------------------------git fugitive----------------------------
 keymap.set("n", "<leader>gi", "<cmd>:Git<cr>", { desc = "fugitive" })
-
--- flutter
-keymap.set("n", "<leader>Fo", ":FlutterOutlineToggle<CR>", { desc = "Flutter Outline" })
-keymap.set("n", "<leader>Fe", ":FlutterEmulators<CR>", { desc = "Flutter Emulators" })
-keymap.set("n", "<leader>Fc", ":FlutterDetach<CR>", { desc = "Flutter Detach" })
-keymap.set("n", "<leader>Fd", ":FlutterDevices<CR>", { desc = "Flutter Devices" })
-keymap.set("n", "<leader>Fq", ":FlutterQuit<CR>", { desc = "Flutter Quit" })
-keymap.set("n", "<leader>Fr", ":FlutterRun<CR>", { desc = "Flutter Run" })
-
--- jupynium
-keymap.set("n", "<leader>jS", ":JupyniumStartSync<CR>", { desc = "Start Sync" })
-keymap.set("n", "<leader>jq", ":JupyniumStopSync<CR>", { desc = "Stop Sync" })
-keymap.set("n", "<leader>ja", ":JupyniumStartAndAttachToServer<CR>", { desc = "Start and Attach to Server" })
-keymap.set("n", "<leader>jx", ":JupyniumExecuteSelectedCells<CR>", { desc = "Execute Cell" })
-keymap.set("n", "<leader>jf", ":JupyniumShortsightedToggle<CR>", { desc = "Shortsighted Toggle" })
-keymap.set("n", "<leader>ju", ":JupyniumScrollUp<CR>", { desc = "Scroll Up" })
-keymap.set("n", "<leader>jd", ":JupyniumScrollDown<CR>", { desc = "Scroll Down" })
-keymap.set("n", "<leader>jr", ":JupyniumRestartKernel<CR>", { desc = "Restart Kernel" })
-keymap.set("n", "<leader>jn", "I# %%<Esc>", { desc = "New Cell" })
