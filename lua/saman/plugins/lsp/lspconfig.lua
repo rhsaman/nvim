@@ -24,8 +24,8 @@ return {
 			opts.desc = "Show LSP references"
 			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-			opts.desc = "Go to declaration"
-			keymap.set("n", "gd", vim.lsp.buf.declaration, opts) -- go to declaration
+			-- opts.desc = "Go to declaration"
+			-- keymap.set("n", "gd", vim.lsp.buf.declaration, opts) -- go to declaration
 
 			opts.desc = "Show LSP definitions"
 			keymap.set("n", "gD", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions

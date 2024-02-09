@@ -20,7 +20,7 @@ return {
 			f = { name = "files" },
 			F = { name = "flutter" },
 			T = { name = "tab" },
-			w = { name = "session" },
+			w = { name = "vimWiki" },
 			s = { name = "pane" },
 			c = { name = "code" },
 			i = { name = "iron" },
