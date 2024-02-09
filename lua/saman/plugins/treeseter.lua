@@ -11,7 +11,7 @@ return {
 
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
-			local rainbow = require("ts-rainbow")
+			-- local rainbow = require("ts-rainbow")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
@@ -22,7 +22,7 @@ return {
 						html = "rainbow-tags",
 						latex = "rainbow-blocks",
 					},
-					strategy = rainbow.strategy.global,
+					-- strategy = rainbow.strategy.global,
 				},
 				highlight = {
 					enable = true,
@@ -45,13 +45,13 @@ return {
 					"css",
 					-- "prisma",
 					"markdown",
-					-- "markdown_inline",
+					"markdown_inline",
 					-- "svelte",
 					-- "graphql",
 					"bash",
 					"lua",
-					"vim",
 					"dockerfile",
+					"vim",
 					"gitignore",
 					"query",
 					-- "rust",
