@@ -2,13 +2,83 @@ return -- lazy.nvim
 {
 	"folke/noice.nvim",
 	event = "VeryLazy",
-	opts = {
-		-- add any options here
-	},
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 		"MunifTanjim/nui.nvim",
+		"rcarriga/nvim-notify",
 	},
+	opts = {
+		cmdline = {
+			enabled = true, -- enables the Noice cmdline UI
+			view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom
+			opts = {}, -- global options for the cmdline. See section on views
+			format = {
+				cmdline = { pattern = "^:", icon = "", lang = "vim" },
+				search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
+				search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
+				filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
+				lua = { pattern = { "^:%s*lua%s+", "^:%s*lua%s*=%s*", "^:%s*=%s*" }, icon = "", lang = "lua" },
+				help = { pattern = "^:%s*he?l?p?%s+", icon = "" },
+				input = {}, -- Used by input()
+			},
+		},
+		messages = {
+			enabled = true, -- enables the Noice messages UI
+		},
+		popupmenu = {
+			enabled = true, -- enables the Noice popupmenu UI
+		},
+		commands = {
+			history = {
+				-- options for the message history that you get with `:Noice`
+				view = "split",
+				opts = { enter = true, format = "details" },
+				filter = {
+					any = {
+						{ event = "notify" },
+						{ error = true },
+						{ warning = true },
+						{ event = "msg_show", kind = { "" } },
+						{ event = "lsp", kind = "message" },
+					},
+				},
+			},
+			-- :Noice last
+			last = {
+				view = "popup",
+				opts = { enter = true, format = "details" },
+				filter = {
+					any = {
+						{ event = "notify" },
+						{ error = false },
+						{ warning = false },
+						{ event = "msg_show", kind = { "" } },
+						{ event = "lsp", kind = "message" },
+					},
+				},
+				filter_opts = { count = 1 },
+			},
+			-- :Noice errors
+			errors = {
+				view = "popup",
+				opts = { enter = true, format = "details" },
+				filter = { error = true },
+				filter_opts = { reverse = true },
+			},
+		},
+		notify = {
+			enabled = false,
+			view = "notify",
+		},
+		health = {
+			checker = false, -- Disable if you don't want health checks to run
+		},
+		smart_move = {
+			enabled = true, -- you can disable this behaviour here
+			excluded_filetypes = { "cmp_menu", "cmp_docs", "notify" },
+		},
+	},
+	-- add any options here
 
 	config = function()
 		require("noice").setup({
@@ -24,7 +94,6 @@ return -- lazy.nvim
 					["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
 				},
 			},
-			-- you can enable a preset for easier configuration
 			presets = {
 				bottom_search = true, -- use a classic bottom cmdline for search
 				command_palette = false, -- position the cmdline and popupmenu together
