@@ -23,48 +23,10 @@ return -- lazy.nvim
 			},
 		},
 		messages = {
-			enabled = true, -- enables the Noice messages UI
+			enabled = false, -- enables the Noice messages UI
 		},
 		popupmenu = {
-			enabled = true, -- enables the Noice popupmenu UI
-		},
-		commands = {
-			history = {
-				-- options for the message history that you get with `:Noice`
-				view = "split",
-				opts = { enter = true, format = "details" },
-				filter = {
-					any = {
-						{ event = "notify" },
-						{ error = true },
-						{ warning = true },
-						{ event = "msg_show", kind = { "" } },
-						{ event = "lsp", kind = "message" },
-					},
-				},
-			},
-			-- :Noice last
-			last = {
-				view = "popup",
-				opts = { enter = true, format = "details" },
-				filter = {
-					any = {
-						{ event = "notify" },
-						{ error = false },
-						{ warning = false },
-						{ event = "msg_show", kind = { "" } },
-						{ event = "lsp", kind = "message" },
-					},
-				},
-				filter_opts = { count = 1 },
-			},
-			-- :Noice errors
-			errors = {
-				view = "popup",
-				opts = { enter = true, format = "details" },
-				filter = { error = true },
-				filter_opts = { reverse = true },
-			},
+			enabled = false, -- enables the Noice popupmenu UI
 		},
 		notify = {
 			enabled = false,
