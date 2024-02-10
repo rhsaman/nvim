@@ -27,7 +27,7 @@ return {
 			j = { name = "jupynium" },
 			t = { name = "Trouble" },
 			gs = { name = "show" },
-			o = { name = "obsidian note" },
+			n = { name = "note" },
 		}, { prefix = "<leader>" })
 	end,
 }

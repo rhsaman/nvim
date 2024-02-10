@@ -10,14 +10,14 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 
-		{ "<leader>os", ":ObsidianSearch<cr>", desc = "Search" },
-		{ "<leader>ob", ":ObsidianLinkNew<cr>", desc = "New Link" },
-		{ "<leader>on", ":ObsidianNew<cr>", desc = "New note" },
-		{ "<leader>oo", ":ObsidianOpen<cr>", desc = "Open" },
-		{ "<leader>of", ":ObsidianQuickSwitch<cr>", desc = "Find Notes" },
-		{ "<leader>or", ":ObsidianRename<cr>", desc = "Rename" },
-		{ "<leader>ot", ":ObsidianTags<cr>", desc = "Tags" },
-		{ "<leader>ol", ":ObsidianFollowLink<cr>", desc = "Go to Link" },
+		{ "<leader>ns", ":ObsidianSearch<cr>", desc = "Search" },
+		{ "<leader>nb", ":ObsidianLinkNew<cr>", desc = "New Link" },
+		{ "<leader>nn", ":ObsidianNew<cr>", desc = "New note" },
+		{ "<leader>no", ":ObsidianOpen<cr>", desc = "Open" },
+		{ "<leader>nf", ":ObsidianQuickSwitch<cr>", desc = "Find Notes" },
+		{ "<leader>nr", ":ObsidianRename<cr>", desc = "Rename" },
+		{ "<leader>nt", ":ObsidianTags<cr>", desc = "Tags" },
+		{ "<leader>nl", ":ObsidianFollowLink<cr>", desc = "Go to Link" },
 	},
 
 	opts = {

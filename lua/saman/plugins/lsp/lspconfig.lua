@@ -18,8 +18,6 @@ return {
 		local on_attach = function(client, bufnr)
 			opts.buffer = bufnr
 
-			opts.inlay_hints = { enable = true }
-
 			-- set keybinds
 			opts.desc = "Show LSP references"
 			keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
@@ -42,6 +40,8 @@ return {
 			opts.desc = "Show documentation for what is under cursor"
 			keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 		end
+
+		opts.inlay_hints = { enable = true }
 
 		-- used to enable autocompletion (assign to every lsp server config)
 		local capabilities = cmp_nvim_lsp.default_capabilities()
