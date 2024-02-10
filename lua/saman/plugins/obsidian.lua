@@ -13,9 +13,10 @@ return {
 		{ "<leader>os", ":ObsidianSearch<cr>", desc = "Search" },
 		{ "<leader>on", ":ObsidianLinkNew<cr>", desc = "New" },
 		{ "<leader>oo", ":ObsidianOpen<cr>", desc = "Open" },
-		{ "<leader>oq", ":ObsidianQuickSwitch<cr>", desc = "Quik Switch" },
+		{ "<leader>oq", ":ObsidianQuickSwitch<cr>", desc = "Notes" },
 		{ "<leader>or", ":ObsidianRename<cr>", desc = "Rename" },
 		{ "<leader>ot", ":ObsidianTags<cr>", desc = "Tags" },
+		{ "<leader>ol", ":ObsidianFollowLink<cr>", desc = "Go to Link" },
 	},
 
 	opts = {
