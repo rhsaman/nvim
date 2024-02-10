@@ -168,22 +168,22 @@ return {
 			},
 		},
 
-		-- attachments = {
-		-- 	img_folder = "assets/imgs", -- This is the default
-		-- 	img_text_func = function(client, path)
-		-- 		local link_path
-		-- 		local vault_relative_path = client:vault_relative_path(path)
-		-- 		if vault_relative_path ~= nil then
-		-- 			-- Use relative path if the image is saved in the vault dir.
-		-- 			link_path = vault_relative_path
-		-- 		else
-		-- 			-- Otherwise use the absolute path.
-		-- 			link_path = tostring(path)
-		-- 		end
-		-- 		local display_name = vim.fs.basename(link_path)
-		-- 		return string.format("![%s](%s)", display_name, link_path)
-		-- 	end,
-		-- },
+		attachments = {
+			img_folder = "assets/imgs", -- This is the default
+			img_text_func = function(client, path)
+				local link_path
+				local vault_relative_path = client:vault_relative_path(path)
+				if vault_relative_path ~= nil then
+					-- Use relative path if the image is saved in the vault dir.
+					link_path = vault_relative_path
+				else
+					-- Otherwise use the absolute path.
+					link_path = tostring(path)
+				end
+				local display_name = vim.fs.basename(link_path)
+				return string.format("![%s](%s)", display_name, link_path)
+			end,
+		},
 
 		yaml_parser = "native",
 	},
