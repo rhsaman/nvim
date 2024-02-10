@@ -28,7 +28,7 @@ return {
 
 			floating_window_off_x = 1, -- adjust float windows x position.
 			-- can be either a number or function
-			floating_window_off_y = 0, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
+			floating_window_off_y = -1, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
 			-- can be either number or function, see examples
 
 			close_timeout = 4000, -- close floating window after ms when laster parameter is entered
@@ -50,17 +50,16 @@ return {
 			extra_trigger_chars = {}, -- Array of extra characters that will trigger signature completion, e.g., {"(", ","}
 			zindex = 200, -- by default it will be on top of all floating windows, set to <= 50 send it to bottom
 
-			padding = "", -- character to pad on left and right of signature can be ' ', or '|'  etc
+			padding = " ", -- character to pad on left and right of signature can be ' ', or '|'  etc
 
-			transparency = 15, -- disabled by default, allow floating win transparent value 1~100
+			transparency = 20, -- disabled by default, allow floating win transparent value 1~100
 			shadow_blend = 36, -- if you using shadow as border use this set the opacity
-			shadow_guibg = "Black", -- if you using shadow as border use this set the color e.g. 'Green' or '#121315'
+			shadow_guibg = "Green", -- if you using shadow as border use this set the color e.g. 'Green' or '#121315'
 			timer_interval = 200, -- default timer check interval set to lower value if you want to reduce latency
 			toggle_key = "<c-k>", -- toggle signature on and off in insert mode,  e.g. toggle_key = '<M-x>'
 			toggle_key_flip_floatwin_setting = true, -- true: toggle float setting after toggle key pressed
-
 			select_signature_key = nil, -- cycle to next signature, e.g. '<M-n>' function overloading
-			move_cursor_key = "<c-f>", -- imap, use nvim_set_current_win to move cursor between current win and floating
+			move_cursor_key = "<c-e>", -- imap, use nvim_set_current_win to move cursor between current win and floating
 		}
 		require("lsp_signature").setup(cfg) -- no need to specify bufnr if you don't use toggle_key
 
