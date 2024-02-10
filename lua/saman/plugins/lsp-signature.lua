@@ -68,5 +68,3 @@ return {
 		end, { silent = true, noremap = true, desc = "toggle signature" })
 	end,
 }
-
--- recommended:

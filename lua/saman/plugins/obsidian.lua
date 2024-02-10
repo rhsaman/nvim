@@ -4,14 +4,15 @@ return {
 	lazy = true,
 	ft = "markdown",
 	event = {
-		"BufReadPre path/to/my-vault/**.md",
-		"BufNewFile path/to/my-vault/**.md",
+		"BufReadPre ~/Documents/notes/saman/**.md",
+		"BufNewFile ~/Documents/notes/saman/**.md",
 	},
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 
 		{ "<leader>os", ":ObsidianSearch<cr>", desc = "Search" },
-		{ "<leader>on", ":ObsidianLinkNew<cr>", desc = "New" },
+		{ "<leader>ob", ":ObsidianLinkNew<cr>", desc = "New Link" },
+		{ "<leader>on", ":ObsidianNew<cr>", desc = "New note" },
 		{ "<leader>oo", ":ObsidianOpen<cr>", desc = "Open" },
 		{ "<leader>oq", ":ObsidianQuickSwitch<cr>", desc = "Notes" },
 		{ "<leader>or", ":ObsidianRename<cr>", desc = "Rename" },
@@ -22,8 +23,8 @@ return {
 	opts = {
 		workspaces = {
 			{
-				name = "personal",
-				path = "~/Documents/notes",
+				name = "saman",
+				path = "~/Documents/notes/saman",
 			},
 		},
 
@@ -47,11 +48,7 @@ return {
 			},
 		},
 
-		-- Optional, customize how names/IDs for new notes are created.
 		note_id_func = function(title)
-			-- Create note IDs in a Zettelkasten format with a timestamp and a suffix.
-			-- In this case a note with the title 'My new note' will be given an ID that looks
-			-- like '1657296016-my-new-note', and therefore the file name '1657296016-my-new-note.md'
 			local suffix = ""
 			if title ~= nil then
 				-- If title is given, transform it into valid file name.
@@ -62,7 +59,7 @@ return {
 					suffix = suffix .. string.char(math.random(65, 90))
 				end
 			end
-			return tostring(os.time()) .. "-" .. suffix
+			return tostring(suffix)
 		end,
 
 		-- Optional, customize the default name or prefix when pasting images via `:ObsidianPasteImg`.
@@ -180,7 +177,6 @@ return {
 			},
 		},
 
-		-- Specify how to handle attachments.
 		-- attachments = {
 		-- 	img_folder = "assets/imgs", -- This is the default
 		-- 	img_text_func = function(client, path)
@@ -198,12 +194,6 @@ return {
 		-- 	end,
 		-- },
 
-		-- Optional, set the YAML parser to use. The valid options are:
-		--  * "native" - uses a pure Lua parser that's fast but potentially misses some edge cases.
-		--  * "yq" - uses the command-line tool yq (https://github.com/mikefarah/yq), which is more robust
-		--    but much slower and needs to be installed separately.
-		-- In general you should be using the native parser unless you run into a bug with it, in which
-		-- case you can temporarily switch to the "yq" parser until the bug is fixed.
 		yaml_parser = "native",
 	},
 }
