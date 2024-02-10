@@ -30,14 +30,6 @@ return {
 
 		-- see below for full list of options 👇
 		mappings = {
-			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
-			["<leader>op"] = {
-				action = function()
-					return require("obsidian").util.gf_passthrough()
-				end,
-				opts = { noremap = false, expr = true, buffer = true },
-				desc = "passthrough",
-			},
 			-- Toggle check-boxes.
 			["<leader>oc"] = {
 				action = function()
