@@ -45,7 +45,7 @@ return {
 					"css",
 					-- "prisma",
 					"markdown",
-					-- "markdown_inline",
+					"markdown_inline",
 					-- "svelte",
 					-- "graphql",
 					"bash",
