@@ -35,6 +35,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 vim.g.rustfmt_autosave = 1
 
 opt.conceallevel = 1
--- vim.g.vim_markdown_fromtmatter = 1
+vim.g.vim_markdown_fromtmatter = 1
+-- vim.g.markdown_fenced_languages = { "html", "python", "ruby", "vim", "bash", "sh" }
 
 -- vim.g.python3_host_prog = vim.fn.expand("~/Documents/code/kittron/back/py/venv/bin/python3")

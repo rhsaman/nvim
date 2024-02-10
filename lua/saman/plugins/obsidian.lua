@@ -14,7 +14,7 @@ return {
 		{ "<leader>ob", ":ObsidianLinkNew<cr>", desc = "New Link" },
 		{ "<leader>on", ":ObsidianNew<cr>", desc = "New note" },
 		{ "<leader>oo", ":ObsidianOpen<cr>", desc = "Open" },
-		{ "<leader>oq", ":ObsidianQuickSwitch<cr>", desc = "Notes" },
+		{ "<leader>of", ":ObsidianQuickSwitch<cr>", desc = "Find Notes" },
 		{ "<leader>or", ":ObsidianRename<cr>", desc = "Rename" },
 		{ "<leader>ot", ":ObsidianTags<cr>", desc = "Tags" },
 		{ "<leader>ol", ":ObsidianFollowLink<cr>", desc = "Go to Link" },
@@ -80,7 +80,6 @@ return {
 					out[k] = v
 				end
 			end
-
 			return out
 		end,
 
