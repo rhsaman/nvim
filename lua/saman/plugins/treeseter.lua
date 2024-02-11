@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" },
+		-- event = { "BufReadPre", "BufNewFile" },
 		build = ":TSUpdate",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
@@ -45,7 +45,7 @@ return {
 				},
 				highlight = {
 					enable = true,
-					additional_vim_regex_highlighting = false,
+					-- additional_vim_regex_highlighting = false,
 				},
 				-- enable indentation
 				indent = { enable = true },
