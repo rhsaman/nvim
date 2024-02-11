@@ -28,7 +28,7 @@ return {
 
 			floating_window_off_x = 1, -- adjust float windows x position.
 			-- can be either a number or function
-			floating_window_off_y = -1, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
+			floating_window_off_y = 1, -- adjust float windows y position. e.g -2 move window up 2 lines; 2 move down 2 lines
 			-- can be either number or function, see examples
 
 			close_timeout = 4000, -- close floating window after ms when laster parameter is entered
