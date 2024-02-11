@@ -1,7 +1,7 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
-		-- event = { "BufReadPre", "BufNewFile" },
+		event = { "BufReadPre", "BufNewFile" },
 		build = ":TSUpdate",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
@@ -12,10 +12,8 @@ return {
 
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
-			-- local rainbow = require("ts-rainbow")
 
-			-- configure treesitter
-			treesitter.setup({ -- enable syntax highlighting
+			treesitter.setup({
 				rainbow = {
 					enable = true,
 					query = {
@@ -43,16 +41,6 @@ return {
 						show_help = "?",
 					},
 				},
-				highlight = {
-					enable = true,
-					-- additional_vim_regex_highlighting = false,
-				},
-				-- enable indentation
-				indent = { enable = true },
-				-- enable autotagging (w/ nvim-ts-autotag plugin)
-				autotag = {
-					enable = true,
-				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
 					"json",
@@ -77,6 +65,14 @@ return {
 					"go",
 					"dart",
 				},
+				highlight = { enable = true },
+				auto_install = true,
+				-- enable indentation
+				indent = { enable = true },
+				-- enable autotagging (w/ nvim-ts-autotag plugin)
+				autotag = {
+					enable = true,
+				},
 
 				incremental_selection = {
 					enable = true,
@@ -98,4 +94,5 @@ return {
 			})
 		end,
 	},
+	-- (field name: (identifier) @variable (#eq? @variable "config") (#set! conceal "hi"))
 }

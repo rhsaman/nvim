@@ -11,10 +11,10 @@ return {
 			highlights = require("catppuccin.groups.integrations.bufferline").get(),
 		})
 		-- bufferLine
-		vim.keymap.set("n", "th", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
+		-- vim.keymap.set("n", "th", ":BufferLineCloseLeft<cr>", { desc = "Close Left" })
+		-- vim.keymap.set("n", "tr", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
 		vim.keymap.set("n", "tl", ":BufferLineMoveNext<cr>", { desc = "Move Next" })
 		vim.keymap.set("n", "th", ":BufferLineMovePre<cr>", { desc = "Move Prev" })
-		vim.keymap.set("n", "tr", ":BufferLineCloseRight<cr>", { desc = "Close Right" })
 		vim.keymap.set("n", "to", ":BufferLineCloseOthers<cr>", { desc = "Close Others" })
 		vim.keymap.set("n", "L", ":BufferLineCycleNext<cr>", { desc = "Next" })
 		vim.keymap.set("n", "H", ":BufferLineCyclePrev<cr>", { desc = "Preview" })
