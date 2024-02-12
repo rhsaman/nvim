@@ -1,12 +1,8 @@
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*", -- recommended, use latest release instead of latest commit
-	lazy = true,
+	-- event = "VeryLazy",
 	ft = "markdown",
-	event = {
-		"BufReadPre ~/Documents/notes/saman/**.md",
-		"BufNewFile ~/Documents/notes/saman/**.md",
-	},
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 
@@ -21,6 +17,7 @@ return {
 	},
 
 	opts = {
+
 		workspaces = {
 			{
 				name = "saman",
@@ -185,11 +182,12 @@ return {
 			end,
 		},
 
+		-- vim.cmd("hi @markup.raw.delimiter guifg=red"),
+		-- vim.cmd("hi @h1 guifg=#B4D797"),
+		-- vim.cmd("hi @head guifg=white"),
+		-- vim.cmd("hi @conceal guifg=red"),
+		-- vim.cmd("hi @title guifg=#CBD2F5"),
+
 		yaml_parser = "native",
-		vim.cmd("hi @markup.raw.delimiter guifg=red"),
-		vim.cmd("hi @h1 guifg=#B4D797"),
-		vim.cmd("hi @head guifg=white"),
-		vim.cmd("hi @conceal guifg=red"),
-		vim.cmd("hi @title guifg=#CBD2F5"),
 	},
 }
