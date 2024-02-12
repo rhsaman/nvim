@@ -34,6 +34,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- rust auto save
 vim.g.rustfmt_autosave = 1
 
-opt.conceallevel = 1
-vim.g.vim_markdown_frontmatter = 1
+opt.conceallevel = 2
+vim.g.vim_markdown_frontmatter = 0
 -- vim.g.python3_host_prog = vim.fn.expand("~/Documents/code/kittron/back/py/venv/bin/python3")

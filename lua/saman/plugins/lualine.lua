@@ -12,8 +12,8 @@ return {
 			yellow = "#FFDA7B",
 			red = "#FF4A4A",
 			fg = "#c3ccdc",
-			bg = "#112638",
-			inactive_bg = "#2c3043",
+			bg = "#242424",
+			inactive_bg = "#353A3B",
 		}
 
 		local my_lualine_theme = {

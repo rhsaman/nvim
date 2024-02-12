@@ -5,7 +5,7 @@ local keymap = vim.keymap
 keymap.set("i", "jj", "<Esc>")
 
 -- nohls
-keymap.set("n", "nh", "<cmd>nohls<cr>", { desc = "nohls" })
+keymap.set("n", "<leader>h", "<cmd>nohls<cr>", { desc = "nohls" })
 
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 
