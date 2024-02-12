@@ -187,10 +187,9 @@ return {
 
 		yaml_parser = "native",
 		vim.cmd("hi @markup.raw.delimiter guifg=red"),
-		vim.cmd("hi @h1 guifg=white"),
+		vim.cmd("hi @h1 guifg=#B4D797"),
 		vim.cmd("hi @head guifg=white"),
 		vim.cmd("hi @conceal guifg=red"),
-		-- vim.cmd("hi @indentBlock guibg=red"),
 		vim.cmd("hi @title guifg=#CBD2F5"),
 	},
 }
