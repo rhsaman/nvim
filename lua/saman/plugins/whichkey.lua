@@ -16,7 +16,6 @@ return {
 		local wk = require("which-key")
 		wk.register({
 			d = { name = "debug" },
-			g = { name = "git" },
 			f = { name = "files" },
 			F = { name = "flutter" },
 			T = { name = "tab" },
@@ -26,7 +25,6 @@ return {
 			i = { name = "iron" },
 			j = { name = "jupynium" },
 			t = { name = "Trouble" },
-			gs = { name = "show" },
 			n = { name = "note" },
 		}, { prefix = "<leader>" })
 	end,

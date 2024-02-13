@@ -28,24 +28,3 @@ keymap.set("n", "<leader>To", ":tabnew<CR>", { desc = "open tab" })
 keymap.set("n", "<leader>Tx", ":tabclose<CR>", { desc = "close tab" })
 keymap.set("n", "<leader>Tk", ":tabn<CR>", { desc = "next tab" })
 keymap.set("n", "<leader>Tj", ":tabp<CR>", { desc = "previous tab" })
-
--- telescope git commands (not on youtube nvim video)
-keymap.set(
-	"n",
-	"<leader>gsc",
-	"<cmd>Telescope git_commits<cr>",
-	{ desc = "list all git commits (use <cr> to checkout)" }
-)
-keymap.set(
-	"n",
-	"<leader>gsC",
-	"<cmd>Telescope git_bcommits<cr>",
-	{ desc = "list git commits for current file/buffer (use <cr> to checkout)" }
-)
-keymap.set("n", "<leader>gsb", "<cmd>Telescope git_branches<cr>", { desc = "list git branches (use <cr> to checkout)" })
-keymap.set(
-	"n",
-	"<leader>gss",
-	"<cmd>Telescope git_status<cr>",
-	{ desc = "list current changes per file with diff preview" }
-)
