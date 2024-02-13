@@ -5,7 +5,7 @@ return {
 			top_down = false,
 			stages = "slide",
 			timeout = 1000,
-			render = "wrapped-compact",
+			render = "default",
 			fps = 30,
 			icons = {
 				DEBUG = "",
