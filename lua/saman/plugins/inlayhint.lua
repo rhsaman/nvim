@@ -1,6 +1,5 @@
 return {
 	"lvimuser/lsp-inlayhints.nvim",
-	-- event = "VeryLazy",
 	ft = { "go", "rust" },
 
 	keys = {
