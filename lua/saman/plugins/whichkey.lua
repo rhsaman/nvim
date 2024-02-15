@@ -28,6 +28,7 @@ return {
 			t = { name = "Trouble" },
 			gs = { name = "show" },
 			n = { name = "note" },
+			h = { name = "harpoon" },
 		}, { prefix = "<leader>" })
 	end,
 }
