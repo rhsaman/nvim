@@ -23,6 +23,66 @@ return {
 					},
 					-- strategy = rainbow.strategy.global,
 				},
+
+				highlight = { enable = true },
+
+				auto_install = true,
+
+				indent = { enable = true },
+
+				incremental_selection = {
+					enable = true,
+				},
+
+				-- autotag
+				require("nvim-treesitter.configs").setup({
+					autotag = {
+						enable = true,
+						enable_rename = true,
+						enable_close = true,
+						enable_close_on_slash = true,
+						filetypes = {
+							"html",
+							"javascript",
+							"typescript",
+							"javascriptreact",
+							"typescriptreact",
+							"svelte",
+							"vue",
+							"tsx",
+							"jsx",
+							"rescript",
+							"xml",
+							"php",
+							"markdown",
+							"astro",
+							"glimmer",
+							"handlebars",
+							"hbs",
+						},
+						skip_tags = {
+							"area",
+							"base",
+							"br",
+							"col",
+							"command",
+							"embed",
+							"hr",
+							"img",
+							"slot",
+							"input",
+							"keygen",
+							"link",
+							"meta",
+							"param",
+							"source",
+							"track",
+							"wbr",
+							"menuitem",
+						},
+					},
+				}),
+
 				playground = {
 					enable = true,
 					disable = {},
@@ -65,18 +125,6 @@ return {
 					"go",
 					"dart",
 				},
-				highlight = { enable = true },
-				auto_install = true,
-				-- enable indentation
-				indent = { enable = true },
-				-- enable autotagging (w/ nvim-ts-autotag plugin)
-				autotag = {
-					enable = true,
-				},
-
-				incremental_selection = {
-					enable = true,
-				},
 				-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
 				ts_context_commentstring = {
 					enable = true,
@@ -94,5 +142,4 @@ return {
 			})
 		end,
 	},
-	-- (field name: (identifier) @variable (#eq? @variable "config") (#set! conceal "hi"))
 }
