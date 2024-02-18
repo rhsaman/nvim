@@ -38,3 +38,16 @@ opt.conceallevel = 2
 vim.g.vim_markdown_frontmatter = 0
 
 -- vim.g.python3_host_prog = vim.fn.expand("~/Documents/code/kittron/back/py/venv/bin/python3")
+
+-- fold
+vim.cmd([[ 
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
+augroup END
+]])
+vim.o.foldcolumn = "0"
+vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
