@@ -1,8 +1,8 @@
 return {
 	"stevearc/oil.nvim",
 	opts = {},
-	-- Optional dependencies
 	dependencies = { "nvim-tree/nvim-web-devicons" },
+	event = "VeryLazy",
 	keys = {
 		{ "-", ":Oil<CR>", desc = "Open parent directory" },
 	},
@@ -77,6 +77,7 @@ return {
 				["g."] = "actions.toggle_hidden",
 				-- ["g\\"] = "actions.toggle_trash",
 			},
+			update_on_cursor_moved = true,
 			-- Set to false to disable all of the above keymaps
 			use_default_keymaps = false,
 			view_options = {
