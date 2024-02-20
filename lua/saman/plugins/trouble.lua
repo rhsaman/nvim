@@ -31,7 +31,7 @@ return {
 		toggle_preview = "P", -- toggle auto_preview
 		hover = "K", -- opens a small popup with the full multiline message
 		preview = "p", -- preview the diagnostic location
-		open_code_href = "c", -- if present, open a URI with more information about the diagnostic error
+		open_code_href = "gx", -- if present, open a URI with more information about the diagnostic error
 		close_folds = { "zM", "zm" }, -- close all folds
 		open_folds = { "zR", "zr" }, -- open all folds
 		toggle_fold = { "zA", "za" }, -- toggle fold of current file
@@ -80,7 +80,7 @@ return {
 			require("trouble").toggle("loclist")
 		end, { desc = "loclist" })
 
-		vim.keymap.set("n", "gR", function()
+		vim.keymap.set("n", "tr", function()
 			require("trouble").toggle("lsp_references")
 		end, { desc = "lsp_references" })
 		-- jump to the next item, skipping the groups

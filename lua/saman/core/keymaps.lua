@@ -14,6 +14,14 @@ keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
 keymap.set("n", "<leader>x", ":close<CR>", { desc = "close pane" })
 
+-- lsp
+keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "See available code actions" }) -- see available code actions, in visual mode will apply to selection
+keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP type definitions" }) -- show lsp type definitions
+keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" }) -- show definition, references
+keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Show LSP implementations" }) -- show lsp implementations
+keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" }) -- show documentation for what is under cursor
+keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" }) -- go to declaration
+
 ------------------------resize window-----------------------
 keymap.set("n", "<leader>sh", "<C-w>10<", { desc = "resize left" })
 keymap.set("n", "<leader>sl", "<C-w>10>", { desc = "resize rught" })
