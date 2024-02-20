@@ -80,7 +80,7 @@ return {
 				exclude = {},
 			},
 			git = {
-				enable = true,
+				enable = false,
 				ignore = true,
 				timeout = 500,
 			},
