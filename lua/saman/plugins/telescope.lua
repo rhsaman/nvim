@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	priority = 0,
 	config = function()
@@ -76,6 +77,7 @@ return {
 				vim.api.nvim_buf_set_lines(self.results_bufnr, self.max_results - 1, self.max_results, false, {})
 			end
 		end
+		telescope.load_extension("fzf")
 
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, { desc = "list symbols" })
