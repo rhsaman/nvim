@@ -281,7 +281,6 @@ return {
 					},
 				},
 			},
-			vim.cmd([[Neotree close]]),
 		})
 	end,
 }
