@@ -84,5 +84,7 @@ return {
 		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "recent" })
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "buffers" })
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
+		vim.keymap.set("n", "<leader>fc", ":Telescope git_commits<cr>", { desc = "git commints" })
+		vim.keymap.set("n", "<leader>fC", ":Telescope git_bcommits<cr>", { desc = "git commints current file" })
 	end,
 }
