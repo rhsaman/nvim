@@ -4,7 +4,6 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons",
-		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 	},
 	priority = 0,
 	config = function()
@@ -13,15 +12,6 @@ return {
 		local trouble = require("trouble.providers.telescope")
 
 		telescope.setup({
-			extensions = {
-				frecency = {
-					show_scores = true,
-					show_unindexed = true,
-					ignore_patterns = { "*.git/*", "*/tmp/*" },
-					disable_devicons = false,
-					workspace_scan_cmd = { "rg -.g '!.git' --files" },
-				},
-			},
 			defaults = {
 				path_display = { "truncate " },
 				mappings = {
@@ -70,14 +60,6 @@ return {
 				},
 			},
 		})
-		if insert then
-			if self.sorting_strategy == "descending" then
-				vim.api.nvim_buf_set_lines(self.results_bufnr, 0, 1, false, {})
-			else
-				vim.api.nvim_buf_set_lines(self.results_bufnr, self.max_results - 1, self.max_results, false, {})
-			end
-		end
-		telescope.load_extension("fzf")
 
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, { desc = "list symbols" })
