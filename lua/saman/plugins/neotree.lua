@@ -6,7 +6,6 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
-		"3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 
 	config = function()
@@ -123,7 +122,7 @@ return {
 					["<2-LeftMouse>"] = "open",
 					["<cr>"] = "open",
 					["<esc>"] = "cancel", -- close preview or floating neo-tree window
-					["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
+					["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = false } },
 					-- Read `# Preview Mode` for more information
 					["l"] = "focus_preview",
 					["s"] = "open_split",
