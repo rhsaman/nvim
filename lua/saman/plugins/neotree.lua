@@ -6,8 +6,9 @@ return {
 		"nvim-lua/plenary.nvim",
 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
 		"MunifTanjim/nui.nvim",
-		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		"3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
+
 	config = function()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
 		vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
@@ -135,7 +136,7 @@ return {
 					["w"] = "open_with_window_picker",
 					["z"] = "close_node",
 					-- ['C'] = 'close_all_subnodes',
-					["zz"] = "close_all_nodes",
+					["<c-c>"] = "close_all_nodes",
 					--["Z"] = "expand_all_nodes",
 					["a"] = {
 						"add",

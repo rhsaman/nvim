@@ -10,7 +10,7 @@ keymap.set("n", "<leader>h", "<cmd>nohls<cr>", { desc = "nohls" })
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
 
 -- neotree
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<cr>", { desc = "Neotree" })
+vim.keymap.set("n", "<leader>e", ":Neotree float reveal_force_cwd<cr>", { desc = "Neotree" })
 
 -- window management
 keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
