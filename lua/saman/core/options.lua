@@ -51,3 +51,6 @@ vim.o.foldcolumn = "0"
 vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 vim.o.foldlevelstart = 99
 vim.o.foldenable = true
+
+-- vim-rooter
+vim.cmd("let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh','main.go']")
