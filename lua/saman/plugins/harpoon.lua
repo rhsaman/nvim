@@ -1,7 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
-	dependencies = { "kdheepak/tabline.nvim", "hoob3rt/lualine.nvim" },
-	event = "VeryLazy",
+	-- dependencies = { "kdheepak/tabline.nvim", "hoob3rt/lualine.nvim" },
+	event = { "BufReadPre", "BufNewFile" },
 	keys = {
 		{ "<leader>fh", ':lua require("harpoon.ui").toggle_quick_menu()<cr>', desc = "Menu harpoon" },
 		{ "<leader>fm", ':lua require("harpoon.mark").add_file()<cr>', desc = "mark harpoon" },
@@ -16,7 +16,6 @@ return {
 			tabline_prefix = "  ",
 			tabline_suffix = "  ",
 		})
-		-- require("tabline").setup({ enable = true })
 		vim.cmd("highlight! HarpoonInactive guibg=NONE guifg=#6A6C83")
 		vim.cmd("highlight! HarpoonActive guibg=NONE guifg=#CAA55C")
 		vim.cmd("highlight! HarpoonNumberActive guibg=NONE guifg=#CAA55C")
