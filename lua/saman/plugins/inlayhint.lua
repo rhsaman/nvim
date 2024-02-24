@@ -1,7 +1,6 @@
 return {
 	"lvimuser/lsp-inlayhints.nvim",
 	ft = { "go", "rust" },
-
 	keys = {
 		{
 			"<leader>ci",
