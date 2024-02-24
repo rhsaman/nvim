@@ -1,7 +1,7 @@
 return {
 	"ThePrimeagen/harpoon",
 	-- dependencies = { "kdheepak/tabline.nvim", "hoob3rt/lualine.nvim" },
-	event = { "BufReadPre", "BufNewFile" },
+	-- event = { "BufReadPre", "BufNewFile" },
 	keys = {
 		{ "<leader>fh", ':lua require("harpoon.ui").toggle_quick_menu()<cr>', desc = "Menu harpoon" },
 		{ "<leader>fm", ':lua require("harpoon.mark").add_file()<cr>', desc = "mark harpoon" },
