@@ -11,6 +11,7 @@ return {
 			toggle_key_flip_floatwin_setting = true, -- true: toggle float setting after toggle key pressed
 			select_signature_key = nil, -- cycle to next signature, e.g. '<M-n>' function overloading
 			move_cursor_key = "<c-e>", -- imap, use nvim_set_current_win to move cursor between current win and floating
+			auto_close_after = 4000,
 
 			floating_window_off_x = 5, -- adjust float windows x position.
 			floating_window_off_y = function() -- adjust float windows y position. e.g. set to -2 can make floating window move up 2 lines
