@@ -43,16 +43,12 @@ vim.g.vim_markdown_frontmatter = 0
 vim.cmd("let g:rooter_patterns = ['.git', 'Makefile', '*.sln', 'build/env.sh','main.go']")
 
 -- fold
-vim.cmd([[ 
+vim.cmd([[
 augroup remember_folds
   autocmd!
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent! loadview
 augroup END
 ]])
-vim.o.foldcolumn = "0"
-vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
-vim.o.foldlevelstart = 99
-vim.o.foldenable = true
 
 vim.cmd("set guifont=hack_nerd_font:h21")
