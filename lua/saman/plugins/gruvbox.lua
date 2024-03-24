@@ -12,6 +12,6 @@ return {
 		vim.cmd("hi @title guifg=white")
 
 		-- fold color
-		vim.cmd("hi Folded guibg=#9F834D guifg=black")
+		vim.cmd("hi Folded guibg=#2D2D2D guifg=white")
 	end,
 }

@@ -13,7 +13,8 @@ return {
 		{ "<leader>Fc", ":FlutterDetach<CR>", desc = "Flutter Detach", ft = "dart" },
 		{ "<leader>Fd", ":FlutterDevices<CR>", desc = "Flutter Devices", ft = "dart" },
 		{ "<leader>Fq", ":FlutterQuit<CR>", desc = "Flutter Quit", ft = "dart" },
-		{ "<leader>Fr", ":FlutterRun<CR>", desc = "Flutter Run", ft = "dart" },
+		{ "<leader>Fs", ":FlutterRun<CR>", desc = "Flutter Run", ft = "dart" },
+		{ "<leader>Fr", ":FlutterRestart<CR>", desc = "Flutter Restart", ft = "dart" },
 	},
 	config = function()
 		require("flutter-tools").setup({
