@@ -6,7 +6,7 @@ return {
 		require("mini.indentscope").setup({
 			draw = {
 				-- Delay (in ms) between event and start of drawing scope indicator
-				delay = 100,
+				delay = 50,
 
 				-- Animation rule for scope's first drawing. A function which, given
 				-- next and total step numbers, returns wait time (in ms). See
@@ -38,7 +38,7 @@ return {
 				-- Whether to first check input line to be a border of adjacent scope.
 				-- Use it if you want to place cursor on function header to get scope of
 				-- its body.
-				try_as_border = false,
+				try_as_border = true,
 			},
 
 			-- Which character to use for drawing scope indicator
