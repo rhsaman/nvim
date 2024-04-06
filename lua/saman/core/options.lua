@@ -44,6 +44,7 @@ vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','R
 
 -- gruvbox
 vim.cmd("let g:gruvbox_material_background = 'hard'")
+vim.cmd("let g:gruvbox_material_better_performance = 1")
 
 -- fold
 vim.cmd([[
