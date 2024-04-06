@@ -42,6 +42,9 @@ vim.g.vim_markdown_frontmatter = 0
 -- vim-rooter
 vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md']")
 
+-- gruvbox
+vim.cmd("let g:gruvbox_material_background = 'hard'")
+
 -- fold
 vim.cmd([[
 augroup remember_folds
