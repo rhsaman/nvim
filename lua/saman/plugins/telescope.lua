@@ -49,6 +49,7 @@ return {
 					"jpeg",
 					"gif",
 					":",
+					"assets",
 				},
 			},
 			pickers = {

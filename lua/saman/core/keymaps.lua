@@ -5,7 +5,7 @@ local keymap = vim.keymap
 keymap.set("i", "jj", "<Esc>")
 
 -- nohls
-keymap.set("n", "<leader>h", "<cmd>nohls<cr>", { desc = "nohls" })
+keymap.set("n", "<Esc>", "<cmd>nohls<cr>", { desc = "nohls" })
 
 -- neotree
 vim.keymap.set("n", "<leader>e", ":Neotree float reveal_force_cwd<cr>", { desc = "Neotree" })
