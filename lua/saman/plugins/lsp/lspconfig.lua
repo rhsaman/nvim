@@ -164,6 +164,21 @@ return {
 			},
 		})
 
+		-- dart
+		lspconfig.dartls.setup({
+			on_attach = on_attach,
+			settings = {
+				dart = {
+					dartExcludedFolders = {
+						vim.fn.expand("$HOME/AppData/Local/Pub/Cache"),
+						vim.fn.expand("$HOME/.pub-cache"),
+						vim.fn.expand("/opt/homebrew/"),
+						vim.fn.expand("$HOME/tools/flutter/"),
+					},
+				},
+			},
+		})
+
 		-- kubernetes
 		lspconfig.yamlls.setup({
 			settings = {
