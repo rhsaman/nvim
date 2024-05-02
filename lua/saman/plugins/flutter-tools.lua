@@ -61,7 +61,7 @@ return {
 			},
 			-- flutter_path = "<full/path/if/needed>", -- <-- this takes priority over the lookup
 			flutter_lookup_cmd = nil, -- example "dirname $(which flutter)" or "asdf where flutter"
-			root_patterns = { ".git", "pubspec.yaml" }, -- patterns to find the root of your flutter project
+			root_patterns = { "pubspec.yaml" }, -- patterns to find the root of your flutter project
 			fvm = false, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			widget_guides = {
 				enabled = true,
@@ -73,8 +73,8 @@ return {
 			},
 			dev_log = {
 				enabled = true,
-				notify_errors = false, -- if there is an error whilst running then notify the user
-				open_cmd = "40vs", -- command to use to open the log buffer
+				notify_errors = true, -- if there is an error whilst running then notify the user
+				open_cmd = "30vs", -- command to use to open the log buffer
 				-- open_cmd = "tabedit", -- command to use to open the log buffer
 			},
 			dev_tools = {
@@ -82,7 +82,7 @@ return {
 				auto_open_browser = false, -- Automatically opens devtools in the browser
 			},
 			outline = {
-				open_cmd = "30vnew", -- command to use to open the outline buffer
+				open_cmd = "30vs", -- command to use to open the outline buffer
 				auto_open = false, -- if true this will open the outline automatically when it is first populated
 			},
 			lsp = {
