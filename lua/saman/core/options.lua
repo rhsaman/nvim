@@ -53,12 +53,12 @@ vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
 vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
 -- fold
-vim.cmd([[
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent! loadview
-augroup END
-]])
+-- vim.cmd([[
+-- augroup remember_folds
+--   autocmd!
+--   autocmd BufWinLeave *.* mkview
+--   autocmd BufWinEnter *.* silent! loadview
+-- augroup END
+-- ]])
 
-vim.cmd("set guifont=hack_nerd_font:h21")
+-- vim.cmd("set guifont=hack_nerd_font:h21")
