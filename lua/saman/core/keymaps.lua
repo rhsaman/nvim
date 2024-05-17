@@ -18,7 +18,7 @@ keymap.set("n", "<leader>ws", ":SessionSave<CR>", { desc = "Save session for aut
 keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "See available code actions" }) -- see available code actions, in visual mode will apply to selection
 keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP type definitions" }) -- show lsp type definitions
 keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" }) -- show definition, references
-keymap.set("n", "R", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" }) -- show documentation for what is under cursor
+-- keymap.set("n", "R", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" }) -- show documentation for what is under cursor
 keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" }) -- go to declaration
 
 ------------------------resize window-----------------------
@@ -60,3 +60,10 @@ keymap.set(
 	"<cmd>Telescope git_status<cr>",
 	{ desc = "list current changes per file with diff preview" }
 )
+
+-- inlay hint
+vim.keymap.set("n", "<leader>i", function()
+	if vim.lsp.inlay_hint then
+		vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+	end
+end, { desc = "inlayHint" })

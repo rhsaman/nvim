@@ -23,7 +23,6 @@ return {
 			w = { name = "vimWiki" },
 			s = { name = "pane" },
 			c = { name = "code" },
-			i = { name = "iron" },
 			j = { name = "jupynium" },
 			t = { name = "Trouble" },
 			gs = { name = "show" },

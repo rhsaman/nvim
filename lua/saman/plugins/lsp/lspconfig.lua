@@ -12,10 +12,7 @@ return {
 		-- import cmp-nvim-lsp plugin
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
-		-- local keymap = vim.keymap -- for conciseness
-
 		local opts = { noremap = true, silent = true }
-
 		opts.inlay_hints = { enable = true }
 
 		-- used to enable autocompletion (assign to every lsp server config)
@@ -107,11 +104,11 @@ return {
 					staticcheck = true,
 					hints = {
 						assignVariableTypes = true,
-						-- compositeLiteralFields = true,
-						-- compositeLiteralTypes = true,
-						-- constantValues = true,
-						-- functionTypeParameters = true,
-						-- parameterNames = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						constantValues = true,
+						functionTypeParameters = true,
+						parameterNames = true,
 						rangeVariableTypes = true,
 					},
 				},

@@ -4,6 +4,7 @@
         "opts"
     ],
     "diagnostics.disable": [
-        "undefined-global"
+        "undefined-global",
+        "missing-parameter"
     ]
 }
