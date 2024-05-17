@@ -40,15 +40,13 @@ vim.g.vim_markdown_frontmatter = 0
 -- vim.g.python3_host_prog = vim.fn.expand("~/Documents/code/kittron/back/py/venv/bin/python3")
 
 -- vim-rooter
-vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md']")
+-- vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md']")
 
 -- gruvbox
 vim.cmd("let g:gruvbox_material_background = 'hard'")
 vim.cmd("let g:gruvbox_material_better_performance = 1")
 vim.cmd("let g:gruvbox_material_enable_bold = 1")
--- mix original material
 vim.cmd("let g:gruvbox_material_foreground = 'original'")
---  highlighted , colored , grey
 vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
 vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
@@ -60,5 +58,3 @@ vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 --   autocmd BufWinEnter *.* silent! loadview
 -- augroup END
 -- ]])
-
--- vim.cmd("set guifont=hack_nerd_font:h21")
