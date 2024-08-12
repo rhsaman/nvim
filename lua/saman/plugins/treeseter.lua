@@ -11,7 +11,6 @@ return {
 
 		config = function()
 			local treesitter = require("nvim-treesitter.configs")
-			-- local rainbow = require("ts-rainbow")
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
@@ -36,6 +35,7 @@ return {
 				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
+					"maintained",
 					"json",
 					"javascript",
 					"typescript",
@@ -57,6 +57,7 @@ return {
 					-- "rust",
 					"go",
 					"dart",
+					"python",
 				},
 
 				incremental_selection = {
