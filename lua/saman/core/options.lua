@@ -37,7 +37,7 @@ vim.g.rustfmt_autosave = 1
 opt.conceallevel = 2
 vim.g.vim_markdown_frontmatter = 0
 
-vim.g.python3_host_prog = "~/Documents/code/hamemigan/ai/env/bin/python3"
+vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
 -- vim-rooter
 vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md','main.py']")

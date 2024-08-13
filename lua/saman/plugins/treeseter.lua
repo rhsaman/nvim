@@ -35,7 +35,6 @@ return {
 				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
-					"maintained",
 					"json",
 					"javascript",
 					"typescript",

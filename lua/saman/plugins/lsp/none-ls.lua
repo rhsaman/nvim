@@ -32,7 +32,14 @@ return {
 		-- configure null_ls
 		null_ls.setup({
 			-- add package.json as identifier for root (for typescript monorepos)
-			root_dir = null_ls_utils.root_pattern(".null-ls-root", "Makefile", ".git", "package.json"),
+			root_dir = null_ls_utils.root_pattern(
+				".null-ls-root",
+				"Makefile",
+				".git",
+				"package.json",
+				"main.py",
+				"app.py"
+			),
 			-- setup formatters & linters
 			sources = {
 				--  to disable file types use
@@ -48,6 +55,7 @@ return {
 				formatting.black,
 				diagnostics.pylint,
 				formatting.isort,
+				require("null-ls").builtins.diagnostics.eslint_d,
 				-- diagnostics.eslint_d.with({ -- js/ts linter
 				-- 	condition = function(utils)
 				-- 		return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
