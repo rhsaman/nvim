@@ -55,12 +55,7 @@ return {
 				formatting.black,
 				diagnostics.pylint,
 				formatting.isort,
-				require("null-ls").builtins.diagnostics.eslint_d,
-				-- diagnostics.eslint_d.with({ -- js/ts linter
-				-- 	condition = function(utils)
-				-- 		return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-				-- 	end,
-				-- }),
+				null_ls.builtins.diagnostics.eslint,
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)
