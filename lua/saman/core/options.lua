@@ -40,7 +40,7 @@ vim.g.vim_markdown_frontmatter = 0
 vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
 -- vim-rooter
-vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md','main.py']")
+vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md','main.py','app.py']")
 
 -- gruvbox
 vim.cmd("let g:gruvbox_material_background = 'hard'")
