@@ -19,6 +19,7 @@ return {
 				"black", -- python formatter
 				"pylint", -- python linter
 				"eslint_d", -- js linter
+				"isort",
 			},
 		})
 
@@ -55,7 +56,7 @@ return {
 				formatting.black,
 				diagnostics.pylint,
 				formatting.isort,
-				null_ls.builtins.diagnostics.eslint,
+				null_ls.builtins.diagnostics.eslint_d,
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)
