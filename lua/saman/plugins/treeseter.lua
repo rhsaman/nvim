@@ -6,7 +6,6 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-textobjects",
 			"windwp/nvim-ts-autotag",
-			"HiPhish/nvim-ts-rainbow2",
 		},
 
 		config = function()
@@ -14,15 +13,15 @@ return {
 
 			-- configure treesitter
 			treesitter.setup({ -- enable syntax highlighting
-				rainbow = {
-					enable = true,
-					query = {
-						"rainbow-parens",
-						html = "rainbow-tags",
-						latex = "rainbow-blocks",
-					},
-					-- strategy = rainbow.strategy.global,
-				},
+				-- rainbow = {
+				-- 	enable = true,
+				-- 	query = {
+				-- 		"rainbow-parens",
+				-- 		html = "rainbow-tags",
+				-- 		latex = "rainbow-blocks",
+				-- 	},
+				-- 	-- strategy = rainbow.strategy.global,
+				-- },
 				highlight = {
 					enable = true,
 					additional_vim_regex_highlighting = true,
