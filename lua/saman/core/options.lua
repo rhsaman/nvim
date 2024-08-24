@@ -38,11 +38,9 @@ vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
 -- gruvbox
 -- vim.cmd("let g:gruvbox_material_background = 'hard'")
--- vim.cmd("let g:gruvbox_material_better_performance = 1")
--- vim.cmd("let g:gruvbox_material_enable_bold = 1")
--- vim.cmd("let g:gruvbox_material_foreground = 'original'")
--- vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
--- vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+vim.cmd("let g:gruvbox_material_better_performance = 1")
+vim.cmd("let g:gruvbox_material_enable_bold = 1")
+vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
 -- fold
 vim.cmd([[
