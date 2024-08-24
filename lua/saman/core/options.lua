@@ -1,6 +1,6 @@
 local opt = vim.opt -- for conciseness
 -- line numbers
-opt.relativenumber = true -- show relative line numbers
+opt.relativenumber = false -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
@@ -32,23 +32,17 @@ opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
 -- rust auto save
-vim.g.rustfmt_autosave = 1
-
-opt.conceallevel = 2
-vim.g.vim_markdown_frontmatter = 0
+-- vim.g.rustfmt_autosave = 1
 
 vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
--- vim-rooter
-vim.cmd("let g:rooter_patterns = ['.git', 'Makefile','main.go','pubspec.yaml','README.md','main.py','app.py']")
-
 -- gruvbox
-vim.cmd("let g:gruvbox_material_background = 'hard'")
-vim.cmd("let g:gruvbox_material_better_performance = 1")
-vim.cmd("let g:gruvbox_material_enable_bold = 1")
-vim.cmd("let g:gruvbox_material_foreground = 'original'")
-vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
-vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+-- vim.cmd("let g:gruvbox_material_background = 'hard'")
+-- vim.cmd("let g:gruvbox_material_better_performance = 1")
+-- vim.cmd("let g:gruvbox_material_enable_bold = 1")
+-- vim.cmd("let g:gruvbox_material_foreground = 'original'")
+-- vim.cmd("let g:gruvbox_material_diagnostic_virtual_text = 'colored'")
+-- vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
 -- fold
 vim.cmd([[
