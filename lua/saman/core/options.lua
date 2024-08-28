@@ -42,11 +42,10 @@ vim.cmd("let g:gruvbox_material_better_performance = 1")
 vim.cmd("let g:gruvbox_material_enable_bold = 1")
 vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
--- fold
+-- workdir
 vim.cmd([[
-augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave *.* mkview
-  autocmd BufWinEnter *.* silent! loadview
+augroup cdpwd
+    autocmd!
+    autocmd VimEnter * cd $PWD
 augroup END
 ]])
