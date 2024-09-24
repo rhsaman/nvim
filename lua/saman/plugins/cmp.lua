@@ -68,6 +68,7 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
+				{ name = "codeium" },
 				{ name = "vsnip" },
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
@@ -77,6 +78,8 @@ return {
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
 				format = lspkind.cmp_format({
+					mode = "symbol",
+					symbol_map = { Codeium = "" },
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
