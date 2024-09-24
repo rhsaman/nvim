@@ -79,7 +79,7 @@ return {
 			formatting = {
 				format = lspkind.cmp_format({
 					mode = "symbol",
-					symbol_map = { Codeium = "" },
+					symbol_map = { Codeium = "codium" },
 					maxwidth = 50,
 					ellipsis_char = "...",
 				}),
