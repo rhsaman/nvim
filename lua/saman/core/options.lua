@@ -49,4 +49,3 @@ augroup cdpwd
     autocmd VimEnter * cd $PWD
 augroup END
 ]])
-vim.cmd("let g:codeium_manual = v:true")
