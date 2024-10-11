@@ -1,4 +1,9 @@
 return {
+	--  usage
+	-- TODO: do something
+	-- FIX: this should be fixed
+	-- HACK: weird code warning
+
 	"folke/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	event = { "VeryLazy" },
