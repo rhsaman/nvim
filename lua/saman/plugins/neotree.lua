@@ -132,7 +132,7 @@ return {
 					-- ["<cr>"] = "open_drop",
 					-- ["t"] = "open_tab_drop",
 					["w"] = "open_with_window_picker",
-					["z"] = "close_node",
+					["zz"] = "close_node",
 					-- ['C'] = 'close_all_subnodes',
 					["<c-c>"] = "close_all_nodes",
 					--["Z"] = "expand_all_nodes",
