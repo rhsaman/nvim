@@ -24,6 +24,7 @@ return {
 			},
 		})
 
+		-- set up LSP servers
 		mason_lspconfig.setup({
 			-- list of servers for mason to install
 			ensure_installed = {
@@ -31,27 +32,22 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
-				-- "svelte",
 				"lua_ls",
-				-- "graphql",
 				"emmet_ls",
-				-- "prismals",
-				"pyright",
-				-- "rust_analyzer",
-				"gopls",
+				"pyright", -- Python LSP server
+				"gopls", -- Go LSP server
 			},
 			-- auto-install configured servers (with lspconfig)
-			automatic_installation = true, -- not the same as ensure_installed
+			automatic_installation = true,
 		})
 
+		-- setup for external tools
 		mason_tool_installer.setup({
 			ensure_installed = {
-				"prettier", -- prettier formatter
-				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"pylint", -- python linter
-				"eslint_d", -- js linter
+				"prettier", -- JS/HTML/CSS formatter
+				"stylua", -- Lua formatter
+				"black", -- Python formatter
+				"eslint_d", -- JS/TS linter
 			},
 		})
 	end,

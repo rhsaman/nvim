@@ -17,9 +17,7 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"black", -- python formatter
-				"pylint", -- python linter
 				"eslint_d", -- js linter
-				"isort",
 			},
 		})
 
@@ -54,8 +52,6 @@ return {
 				formatting.goimports,
 				formatting.golines,
 				formatting.black,
-				diagnostics.pylint,
-				formatting.isort,
 				-- null_ls.builtins.diagnostics.eslint_d,
 			},
 			-- configure format on save
