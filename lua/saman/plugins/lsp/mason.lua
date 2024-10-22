@@ -35,6 +35,7 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"pyright", -- Python LSP server
+				"ruff",
 				"gopls", -- Go LSP server
 			},
 			-- auto-install configured servers (with lspconfig)

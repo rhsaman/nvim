@@ -52,6 +52,8 @@ return {
 				formatting.goimports,
 				formatting.golines,
 				formatting.black,
+				diagnostics.mypy,
+				diagnostics.ruff,
 				-- null_ls.builtins.diagnostics.eslint_d,
 			},
 			-- configure format on save
@@ -63,10 +65,10 @@ return {
 						buffer = bufnr,
 						callback = function()
 							vim.lsp.buf.format({
-								filter = function(client)
-									--  only use null-ls for formatting instead of lsp server
-									return client.name == "null-ls"
-								end,
+								-- filter = function(client)
+								-- 	--  only use null-ls for formatting instead of lsp server
+								-- 	return client.name == "null-ls"
+								-- end,
 								bufnr = bufnr,
 							})
 						end,
