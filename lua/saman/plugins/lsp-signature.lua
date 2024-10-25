@@ -1,5 +1,6 @@
 return {
 	"ray-x/lsp_signature.nvim",
+	lazy = true,
 	event = "BufRead",
 	config = function()
 		local cfg = {

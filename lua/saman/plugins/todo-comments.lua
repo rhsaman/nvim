@@ -6,6 +6,7 @@ return {
 
 	"folke/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
+	lazy = true,
 	event = { "VeryLazy" },
 	keys = {
 		{ "<leader>ft", ":TodoTelescope theme=dropdown<cr>", desc = "TODO List" },
