@@ -49,18 +49,3 @@ augroup cdpwd
     autocmd VimEnter * cd $PWD
 augroup END
 ]])
-
--- fold
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		-- List of file types where foldmethod should not be set
-		local exclude_filetypes = { "NvimTree", "neo-tree", "dashboard", "alpha" }
-		if not vim.tbl_contains(exclude_filetypes, vim.bo.filetype) then
-			-- Set foldmethod to 'indent' only for non-explorer files
-			opt.foldmethod = "indent"
-			opt.foldlevel = 99 -- Optional: keeps folds open by default
-			opt.foldenable = true
-		end
-	end,
-})
