@@ -73,8 +73,8 @@ return {
 				enabled = true, -- set to false to disable
 			},
 			dev_log = {
-				enabled = true,
-				notify_errors = true, -- if there is an error whilst running then notify the user
+				enabled = false,
+				notify_errors = false, -- if there is an error whilst running then notify the user
 				open_cmd = "30vs", -- command to use to open the log buffer
 				-- open_cmd = "tabedit", -- command to use to open the log buffer
 			},
