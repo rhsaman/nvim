@@ -1,21 +1,25 @@
 return {
-	"lukas-reineke/indent-blankline.nvim",
-	lazy = true,
-	event = "VeryLazy",
-	main = "ibl",
-	opts = {},
+  "lukas-reineke/indent-blankline.nvim",
+  lazy = true,
+  event = "VeryLazy",
+  main = "ibl",
+  opts = {},
 
-	config = function()
-		local highlight = { "gray" }
-		local hooks = require("ibl.hooks")
+  config = function()
+    local highlight = { "gray" }
+    local hooks = require("ibl.hooks")
 
-		hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-			vim.api.nvim_set_hl(0, "gray", { fg = "#262538" })
-		end)
+    hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+      --  cappuchino
+      vim.api.nvim_set_hl(0, "gray", { fg = "#262538" })
 
-		require("ibl").setup({
-			scope = { enabled = false },
-			indent = { highlight = highlight },
-		})
-	end,
+      -- gruvebox
+      vim.api.nvim_set_hl(0, "gray", { fg = "#2D2D2D" })
+    end)
+
+    require("ibl").setup({
+      scope = { enabled = false },
+      indent = { highlight = highlight },
+    })
+  end,
 }
