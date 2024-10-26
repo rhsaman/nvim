@@ -10,7 +10,7 @@ return {
 		-- configure lualine with modified theme
 		lualine.setup({
 			options = {
-				theme = "cappuchino",
+				theme = "auto",
 			},
 			sections = {
 				lualine_x = {
