@@ -36,12 +36,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
--- gruvbox
--- vim.cmd("let g:gruvbox_material_background = 'hard'")
-vim.cmd("let g:gruvbox_material_better_performance = 1")
-vim.cmd("let g:gruvbox_material_enable_bold = 1")
-vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
-
 -- workdir
 vim.cmd([[
 augroup cdpwd
@@ -49,3 +43,16 @@ augroup cdpwd
     autocmd VimEnter * cd $PWD
 augroup END
 ]])
+
+-- gruvbox
+-- vim.cmd("let g:gruvbox_material_background = 'hard'")
+-- vim.cmd("let g:gruvbox_material_better_performance = 1")
+-- vim.cmd("let g:gruvbox_material_enable_bold = 1")
+-- vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+
+vim.g.nord_contrast = true
+vim.g.nord_borders = true
+vim.g.nord_disable_background = false
+vim.g.nord_italic = false
+vim.g.nord_uniform_diff_background = true
+vim.g.nord_bold = true
