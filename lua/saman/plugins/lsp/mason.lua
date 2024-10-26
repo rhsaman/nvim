@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason.nvim",
+	lazy = true,
 	event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
 	dependencies = {
 		"williamboman/mason-lspconfig.nvim",
