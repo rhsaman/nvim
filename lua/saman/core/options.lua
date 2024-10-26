@@ -58,15 +58,15 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
--- gruvbox
--- vim.cmd("let g:gruvbox_material_background = 'hard'")
--- vim.cmd("let g:gruvbox_material_better_performance = 1")
--- vim.cmd("let g:gruvbox_material_enable_bold = 1")
--- vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
 
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
-vim.g.nord_disable_background = false
-vim.g.nord_italic = false
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = true
+-- vim.cmd("let g:gruvbox_material_background = 'hard'")
+vim.cmd("let g:gruvbox_material_better_performance = 1")
+vim.cmd("let g:gruvbox_material_enable_bold = 1")
+vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+
+-- vim.g.nord_contrast = true
+-- vim.g.nord_borders = true
+-- vim.g.nord_disable_background = false
+-- vim.g.nord_italic = false
+-- vim.g.nord_uniform_diff_background = true
+-- vim.g.nord_bold = true
