@@ -1,12 +1,12 @@
-local opt = vim.opt -- for conciseness
+local opt = vim.opt        -- for conciseness
 -- line numbers
 opt.relativenumber = false -- show relative line numbers
-opt.number = true -- shows absolute line number on cursor line (when relative number is on)
+opt.number = true          -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
-opt.expandtab = true -- expand tab to spaces
+opt.tabstop = 2       -- 2 spaces for tabs (prettier default)
+opt.shiftwidth = 2    -- 2 spaces for indent width
+opt.expandtab = true  -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
@@ -14,7 +14,7 @@ opt.wrap = false -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+opt.smartcase = true  -- if you include mixed case in your search, assumes you want case-sensitive
 
 -- cursor line
 opt.cursorline = false -- highlight the current cursor line
@@ -46,27 +46,20 @@ augroup END
 
 -- fold
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		-- List of file types where foldmethod should not be set
-		local exclude_filetypes = { "NvimTree", "neo-tree", "dashboard", "alpha" }
-		if not vim.tbl_contains(exclude_filetypes, vim.bo.filetype) then
-			-- Set foldmethod to 'indent' only for non-explorer files
-			opt.foldmethod = "indent"
-			opt.foldlevel = 99 -- Optional: keeps folds open by default
-			-- opt.foldenable = true
-		end
-	end,
+  pattern = "*",
+  callback = function()
+    -- List of file types where foldmethod should not be set
+    local exclude_filetypes = { "NvimTree", "neo-tree", "dashboard", "alpha" }
+    if not vim.tbl_contains(exclude_filetypes, vim.bo.filetype) then
+      -- Set foldmethod to 'indent' only for non-explorer files
+      opt.foldmethod = "indent"
+      opt.foldlevel = 99 -- Optional: keeps folds open by default
+      -- opt.foldenable = true
+    end
+  end,
 })
 
 -- vim.cmd("let g:gruvbox_material_background = 'hard'")
 vim.cmd("let g:gruvbox_material_better_performance = 1")
 vim.cmd("let g:gruvbox_material_enable_bold = 1")
 vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
-
--- vim.g.nord_contrast = true
--- vim.g.nord_borders = true
--- vim.g.nord_disable_background = false
--- vim.g.nord_italic = false
--- vim.g.nord_uniform_diff_background = true
--- vim.g.nord_bold = true
