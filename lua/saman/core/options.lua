@@ -1,6 +1,6 @@
 local opt = vim.opt -- for conciseness
 -- line numbers
-opt.relativenumber = false -- show relative line numbers
+opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
@@ -31,6 +31,10 @@ opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
+-- vim.cmd("let g:gruvbox_material_background = 'hard'")
+-- vim.cmd("let g:gruvbox_material_enable_bold = 1")
+-- vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
+
 -- rust auto save
 -- vim.g.rustfmt_autosave = 1
 
@@ -58,8 +62,3 @@ vim.api.nvim_create_autocmd("FileType", {
 		end
 	end,
 })
-
--- vim.cmd("let g:gruvbox_material_background = 'hard'")
--- vim.cmd("let g:gruvbox_material_better_performance = 1")
-vim.cmd("let g:gruvbox_material_enable_bold = 1")
-vim.cmd("let g:gruvbox_material_diagnostic_line_highlight = 1")
