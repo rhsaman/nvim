@@ -120,5 +120,7 @@ return {
 		})
 
 		vim.cmd.colorscheme("rose-pine")
+		-- fold color
+		vim.cmd("highlight Folded guifg=#5B586E guibg=NONE ")
 	end,
 }
