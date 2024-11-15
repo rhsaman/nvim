@@ -65,7 +65,7 @@ return {
 			root_patterns = { "pubspec.yaml" }, -- patterns to find the root of your flutter project
 			fvm = false, -- takes priority over path, uses <workspace>/.fvm/flutter_sdk if enabled
 			widget_guides = {
-				enabled = true,
+				enabled = false,
 			},
 			closing_tags = {
 				-- highlight = "ErrorMsg", -- highlight for the closing tag
@@ -79,7 +79,7 @@ return {
 				-- open_cmd = "tabedit", -- command to use to open the log buffer
 			},
 			dev_tools = {
-				autostart = true, -- autostart devtools server if not detected
+				autostart = false, -- autostart devtools server if not detected
 				auto_open_browser = false, -- Automatically opens devtools in the browser
 			},
 			outline = {
@@ -96,7 +96,7 @@ return {
 					virtual_text_str = "■", -- the virtual text character to highlight
 				},
 				settings = {
-					showTodos = true,
+					showTodos = false,
 					completeFunctionCalls = true,
 					analysisExcludedFolders = { nil },
 					renameFilesWithClasses = "always", -- "always"
