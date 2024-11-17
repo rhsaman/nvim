@@ -8,9 +8,9 @@ return {
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
-		"hrsh7th/cmp-vsnip",
-		"hrsh7th/vim-vsnip",
-		"hrsh7th/vim-vsnip-integ",
+		-- "hrsh7th/cmp-vsnip",
+		-- "hrsh7th/vim-vsnip",
+		-- "hrsh7th/vim-vsnip-integ",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -33,12 +33,12 @@ return {
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
 			},
-			snippet = { -- configure how nvim-cmp interacts with snippet engine
-				expand = function(args)
-					-- luasnip.lsp_expand(args.body)
-					vim.fn["vsnip#anonymous"](args.body)
-				end,
-			},
+			-- snippet = { -- configure how nvim-cmp interacts with snippet engine
+			-- 	expand = function(args)
+			-- 		-- luasnip.lsp_expand(args.body)
+			-- 		vim.fn["vsnip#anonymous"](args.body)
+			-- 	end,
+			-- },
 			mapping = cmp.mapping.preset.insert({
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 				["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
@@ -47,29 +47,29 @@ return {
 				["<C-i>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				["<CR>"] = cmp.mapping.confirm({ select = true }), --enter autocompletion
-				["<Tab>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						cmp.select_next_item()
-					elseif vim.fn["vsnip#jumpable"](1) == 1 then
-						feedkey("<Plug>(vsnip-jump-next)", "")
-					elseif has_words_before() then
-						cmp.complete()
-					else
-						fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-					end
-				end, { "i", "s" }),
-				["<S-Tab>"] = cmp.mapping(function()
-					if cmp.visible() then
-						cmp.select_prev_item()
-					elseif vim.fn["vsnip#jumpable"](-1) == 1 then
-						feedkey("<Plug>(vsnip-jump-prev)", "")
-					end
-				end, { "i", "s" }),
+				-- ["<Tab>"] = cmp.mapping(function(fallback)
+				-- 	if cmp.visible() then
+				-- 		cmp.select_next_item()
+				-- 	elseif vim.fn["vsnip#jumpable"](1) == 1 then
+				-- 		feedkey("<Plug>(vsnip-jump-next)", "")
+				-- 	elseif has_words_before() then
+				-- 		cmp.complete()
+				-- 	else
+				-- 		fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+				-- 	end
+				-- end, { "i", "s" }),
+				-- ["<S-Tab>"] = cmp.mapping(function()
+				-- 	if cmp.visible() then
+				-- 		cmp.select_prev_item()
+				-- 	elseif vim.fn["vsnip#jumpable"](-1) == 1 then
+				-- 		feedkey("<Plug>(vsnip-jump-prev)", "")
+				-- 	end
+				-- end, { "i", "s" }),
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
-				{ name = "vsnip" }, -- text within current buffer
+				-- { name = "vsnip" }, -- text within current buffer
 				{ name = "luasnip" }, -- snippets
 			}, {
 				{ name = "buffer" },
