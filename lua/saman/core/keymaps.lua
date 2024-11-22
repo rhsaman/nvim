@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jj", "<Esc>")
-
 -- nohls
 keymap.set("n", "<Esc>", "<cmd>nohls<cr>", { desc = "nohls" })
 
@@ -22,18 +20,11 @@ keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP re
 keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" }) -- go to declaration
 
 ------------------------resize window-----------------------
--- keymap.set("n", "<leader>sh", "<C-w>10<", { desc = "resize left" })
--- keymap.set("n", "<leader>sl", "<C-w>10>", { desc = "resize rught" })
--- keymap.set("n", "<leader>sk", "<C-w>10-", { desc = "resize up" })
--- keymap.set("n", "<leader>sj", "<C-w>10+", { desc = "resize down" })
--- keymap.set("n", "<leader>s=", "<C-w>=", { desc = "resize equal" })
--- window management
--- keymap.set("n", "<leader>|", "<C-w>v", { desc = "split |" })
--- keymap.set("n", "<leader>-", "<C-w>s", { desc = "split -" })
--- keymap.set("n", "<leader>x", ":close<CR>", { desc = "close pane" })
--- vim-maximizer
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", { desc = "maximization" })
 
+keymap.set("n", "<C-w>h", "<C-w>10<", { desc = "Resize window left" })
+keymap.set("n", "<C-w>l", "<C-w>10>", { desc = "Resize window right" })
+keymap.set("n", "<C-w>k", "<C-w>10-", { desc = "Resize window up" })
+keymap.set("n", "<C-w>j", "<C-w>10+", { desc = "Resize window down" })
 -----------------------tabs-----------------------
 -- keymap.set("n", "<leader>To", ":tabnew<CR>", { desc = "open tab" })
 -- keymap.set("n", "<leader>Tx", ":tabclose<CR>", { desc = "close tab" })
