@@ -51,7 +51,6 @@ return {
 				formatting.goimports,
 				formatting.golines,
 				formatting.black,
-				diagnostics.ruff,
 				-- null_ls.builtins.diagnostics.eslint_d,
 			},
 			-- configure format on save
