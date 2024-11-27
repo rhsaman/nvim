@@ -51,7 +51,6 @@ return {
 				formatting.goimports,
 				formatting.golines,
 				formatting.black,
-				diagnostics.mypy,
 				diagnostics.ruff,
 				-- null_ls.builtins.diagnostics.eslint_d,
 			},
