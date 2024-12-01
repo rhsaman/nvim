@@ -138,6 +138,16 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "python" },
+			settings = {
+				pyright = {
+					disableOrganizeImports = false,
+					analysis = {
+						diagnosticMode = "workspace",
+						typeCheckingMode = "off",
+						useLibraryCodeForTypes = true,
+					},
+				},
+			},
 		})
 
 		-- lua server (with special settings)
