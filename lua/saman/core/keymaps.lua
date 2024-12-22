@@ -18,6 +18,7 @@ keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP t
 keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" }) -- show definition, references
 -- keymap.set("n", "R", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" }) -- show documentation for what is under cursor
 keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" }) -- go to declaration
+keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" }) -- go to declaration
 
 ------------------------resize window-----------------------
 
