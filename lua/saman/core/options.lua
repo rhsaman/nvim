@@ -34,15 +34,15 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- rust auto save
 -- vim.g.rustfmt_autosave = 1
 
-vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
+-- vim.g.python3_host_prog = "/Users/saman/.pyenv/shims/python3"
 
 -- workdir
-vim.cmd([[
-augroup cdpwd
-    autocmd!
-    autocmd VimEnter * cd $PWD
-augroup END
-]])
+-- vim.cmd([[
+-- augroup cdpwd
+--     autocmd!
+--     autocmd VimEnter * cd $PWD
+-- augroup END
+-- ]])
 
 -- fold
 vim.api.nvim_create_autocmd("FileType", {
