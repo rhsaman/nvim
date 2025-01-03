@@ -14,7 +14,6 @@ return {
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 
-		-- تنظیمات پیش‌فرض Telescope
 		local default_setup = {
 			defaults = {
 				path_display = { "truncate" },
@@ -51,7 +50,6 @@ return {
 
 		-- بررسی پروژه فلاتر (وجود pubspec.yaml)
 		if vim.fn.filereadable("pubspec.yaml") == 1 then
-			-- تنظیمات برای پروژه‌های فلاتر
 			default_setup.pickers = {
 				find_files = {
 					cwd = vim.fn.getcwd() .. "/lib/",
@@ -59,16 +57,27 @@ return {
 				},
 				live_grep = {
 					cwd = vim.fn.getcwd() .. "/lib/",
+					theme = "dropdown",
+				},
+				oldfiles = {
+					theme = "dropdown",
+				},
+				buffers = {
 					theme = "dropdown",
 				},
 			}
 		else
-			-- تنظیمات پیش‌فرض برای پروژه‌های غیر فلاتر
 			default_setup.pickers = {
 				find_files = {
 					theme = "dropdown",
 				},
 				live_grep = {
+					theme = "dropdown",
+				},
+				oldfiles = {
+					theme = "dropdown",
+				},
+				buffers = {
 					theme = "dropdown",
 				},
 			}
@@ -77,7 +86,6 @@ return {
 		-- اعمال تنظیمات
 		telescope.setup(default_setup)
 
-		-- بارگذاری افزونه‌های Telescope
 		telescope.load_extension("fzf")
 
 		-- تعریف میانبرها
