@@ -10,86 +10,90 @@ return {
 		},
 		"nvim-tree/nvim-web-devicons",
 	},
-	priority = 0,
 	config = function()
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 
-		telescope.setup({
+		-- تنظیمات پیش‌فرض Telescope
+		local default_setup = {
 			defaults = {
-				path_display = { "truncate " },
+				path_display = { "truncate" },
 				mappings = {
 					i = {
-						["<C-k>"] = actions.move_selection_previous, -- move to prev result
-						["<C-j>"] = actions.move_selection_next, -- move to next result
+						["<C-k>"] = actions.move_selection_previous,
+						["<C-j>"] = actions.move_selection_next,
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 					},
 				},
 				file_ignore_patterns = {
 					".git",
 					"node_modules",
-					"mp4",
-					"env",
-					"jpg",
-					"png",
-					"cache",
-					"hdf5",
-					"woff",
-					"woff2",
-					"jpeg",
-					"gif",
-					":",
-					"assets",
+					"%.mp4",
+					"%.jpg",
+					"vendor",
+					"%.png",
+					"%.jpeg",
+					"%.gif",
+					"%.woff",
+					"%.woff2",
 				},
 			},
-			pickers = {
-				find_files = {
-					theme = "dropdown",
-					path_display = { "smart" },
+			pickers = {},
+			extensions = {
+				fzf = {
+					fuzzy = true,
+					override_generic_sorter = true,
+					override_file_sorter = true,
+					case_mode = "smart_case",
 				},
+			},
+		}
 
-				lsp_references = {
+		-- بررسی پروژه فلاتر (وجود pubspec.yaml)
+		if vim.fn.filereadable("pubspec.yaml") == 1 then
+			-- تنظیمات برای پروژه‌های فلاتر
+			default_setup.pickers = {
+				find_files = {
+					cwd = vim.fn.getcwd() .. "/lib/",
+					theme = "dropdown",
+				},
+				live_grep = {
+					cwd = vim.fn.getcwd() .. "/lib/",
+					theme = "dropdown",
+				},
+			}
+		else
+			-- تنظیمات پیش‌فرض برای پروژه‌های غیر فلاتر
+			default_setup.pickers = {
+				find_files = {
 					theme = "dropdown",
 				},
 				live_grep = {
 					theme = "dropdown",
 				},
-				lsp_document_symbols = {
-					theme = "dropdown",
-				},
-				buffers = {
-					theme = "dropdown",
-				},
-				oldfiles = {
-					theme = "dropdown",
-				},
-			},
+			}
+		end
 
-			extensions = {
-				fzf = {
-					fuzzy = true, -- false will only do exact matching
-					override_generic_sorter = true, -- override the generic sorter
-					override_file_sorter = true, -- override the file sorter
-					case_mode = "smart_case", -- or "ignore_case" or "respect_case"
-				},
-			},
-		})
+		-- اعمال تنظیمات
+		telescope.setup(default_setup)
 
+		-- بارگذاری افزونه‌های Telescope
 		telescope.load_extension("fzf")
 
+		-- تعریف میانبرها
 		local builtin = require("telescope.builtin")
 		vim.keymap.set("n", "<leader>fl", builtin.lsp_document_symbols, { desc = "list symbols" })
-		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "file" })
-		vim.keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "string" })
-		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "recent" })
+		vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "find files" })
+		vim.keymap.set("n", "<leader>fs", builtin.live_grep, { desc = "search string" })
+		vim.keymap.set("n", "<leader>fr", builtin.oldfiles, { desc = "recent files" })
 		vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "buffers" })
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "diagnostics" })
-		vim.keymap.set("n", "<leader>fc", ":Telescope git_commits theme=dropdown<cr>", { desc = "git commints" })
+		vim.keymap.set("n", "<leader>fc", ":Telescope git_commits theme=dropdown<cr>", { desc = "git commits" })
 		vim.keymap.set(
 			"n",
 			"<leader>fC",
 			":Telescope git_bcommits theme=dropdown<cr>",
-			{ desc = "git commints current file" }
+			{ desc = "git commits current file" }
 		)
 	end,
 }
